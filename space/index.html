@@ -137,6 +137,8 @@
   table.dstable tbody tr.active { background: var(--surface-raised); }
   table.dstable td { padding: 11px 14px; color: var(--ink-secondary); vertical-align: middle; }
   table.dstable td.dsname { color: var(--ink-primary); font-family: "IBM Plex Mono", monospace; font-size: 12px; }
+  table.dstable td.dsname a.row-hub-link { display: inline-flex; color: var(--ink-muted); margin-left: 7px; vertical-align: middle; }
+  table.dstable td.dsname a.row-hub-link:hover { color: var(--accent); }
   table.dstable td .robot-chip { display: flex; align-items: center; gap: 7px; }
   table.dstable td .robot-chip .dot { width: 7px; height: 7px; border-radius: 50%; }
   table.dstable td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
@@ -397,7 +399,7 @@ function renderTable(){
   const tbody = document.getElementById("tbody");
   tbody.innerHTML = list.map(d => `
     <tr data-id="${d.id}" class="${d.id===activeId?'active':''}">
-      <td class="dsname">${d.name}</td>
+      <td class="dsname">${d.name}<a class="row-hub-link" href="${d.hubUrl}" target="_blank" rel="noopener" title="open on Hub" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4H4a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1v-2"/><path d="M9 3h4v4M13 3L7 9"/></svg></a></td>
       <td><span class="robot-chip">${d.robotType}</span></td>
       <td><span class="cat-pill" style="background:${d.cat.color}22; color:${d.cat.color}">${d.cat.label}</span></td>
       <td class="num">${fmt(d.episodes)}</td>

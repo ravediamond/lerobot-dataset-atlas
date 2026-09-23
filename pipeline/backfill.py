@@ -27,7 +27,7 @@ from pathlib import Path
 from tqdm import tqdm
 
 from analyze import analyze_one
-from classify import classify_heuristic, classify_llm_single, text_for
+from classify import QuotaExceededError, classify_heuristic, classify_llm_single, text_for
 from discover import discover
 
 STATE_PATH = Path(__file__).parent / "state" / "datasets.json"
@@ -113,7 +113,14 @@ def main():
                 for f in futures:
                     f.cancel()
                 break
-            repo_id, rec = fut.result()
+            try:
+                repo_id, rec = fut.result()
+            except QuotaExceededError as e:
+                print(f"\nHF Inference quota hit: {e}\nstopping — checkpointing and exiting.")
+                for f in futures:
+                    f.cancel()
+                stop_requested = True
+                break
             state[repo_id] = rec
             completed_since_checkpoint += 1
             if completed_since_checkpoint >= CHECKPOINT_EVERY:

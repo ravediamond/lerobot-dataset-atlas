@@ -13,6 +13,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
 from backfill import STATE_PATH, load_state, process_one, save_state
+from classify import QuotaExceededError
 from discover import discover
 
 
@@ -57,7 +58,13 @@ def main():
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = [pool.submit(process_one, row, args.mode, llm_client) for row in todo]
         for fut in tqdm(as_completed(futures), total=len(futures), desc=f"update ({args.mode})"):
-            repo_id, rec = fut.result()
+            try:
+                repo_id, rec = fut.result()
+            except QuotaExceededError as e:
+                print(f"\nHF Inference quota hit: {e}\nstopping — checkpointing and exiting.")
+                for f in futures:
+                    f.cancel()
+                break
             state[repo_id] = rec
 
     save_state(state)

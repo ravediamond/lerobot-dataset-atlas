@@ -50,6 +50,25 @@ PROMPT_TMPL = (
     "Reply with only the category key, nothing else.\n\nTask: {text}"
 )
 
+QUOTA_MARKERS = (
+    "exceeded your monthly included credits",
+    "payment required",
+    "quota",
+    "exceeded your",
+)
+
+
+class QuotaExceededError(RuntimeError):
+    """Raised when HF Inference reports the account's usage limit is hit — the
+    caller should stop issuing requests, not fall back to 'other' per record."""
+
+
+def _is_quota_error(e: Exception) -> bool:
+    status = getattr(getattr(e, "response", None), "status_code", None)
+    if status in (402, 429):
+        return True
+    return any(marker in str(e).lower() for marker in QUOTA_MARKERS)
+
 
 def classify_llm_single(client, record: dict) -> tuple[str, str]:
     try:
@@ -61,8 +80,10 @@ def classify_llm_single(client, record: dict) -> tuple[str, str]:
         text = resp.choices[0].message.content.strip().lower()
         cleaned = re.sub(r"[^a-z_]", "", text)
         return record["id"], (cleaned if cleaned in CATEGORIES else "other")
-    except Exception:  # noqa: BLE001 - a single failed call falls back, doesn't kill the run
-        return record["id"], "other"
+    except Exception as e:
+        if _is_quota_error(e):
+            raise QuotaExceededError(str(e)) from e
+        return record["id"], "other"  # transient/other error: fall back, don't kill the run
 
 
 def classify_llm(records: list[dict], max_workers: int = 8) -> dict[str, str]:
