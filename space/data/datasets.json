@@ -1,0 +1,3081 @@
+{
+  "generated": true,
+  "count": 123,
+  "datasets": [
+    {
+      "id": "EgoSteer/EgoSteer-RealWorld",
+      "name": "EgoSteer-RealWorld",
+      "owner": "EgoSteer",
+      "robotType": "egosteer_realman_bimanual",
+      "cat": {
+        "key": "navigation",
+        "label": "Navigation",
+        "color": "#d55181"
+      },
+      "episodes": 54454,
+      "cameras": 4,
+      "fps": 30,
+      "actionDim": 74,
+      "stateDim": 74,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-19",
+      "taskString": "",
+      "downloads": 5991,
+      "hubUrl": "https://huggingface.co/datasets/EgoSteer/EgoSteer-RealWorld"
+    },
+    {
+      "id": "physical-intelligence/libero",
+      "name": "libero",
+      "owner": "physical-intelligence",
+      "robotType": "panda",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 1693,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": null,
+      "stateDim": null,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-02-02",
+      "taskString": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "downloads": 42487,
+      "hubUrl": "https://huggingface.co/datasets/physical-intelligence/libero"
+    },
+    {
+      "id": "zekaiwang/trex_dataset",
+      "name": "trex_dataset",
+      "owner": "zekaiwang",
+      "robotType": "dexmate_vega1_and_sharpa_wave",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 5464,
+      "cameras": 23,
+      "fps": 30,
+      "actionDim": 58,
+      "stateDim": 58,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-16",
+      "taskString": "",
+      "downloads": 33736,
+      "hubUrl": "https://huggingface.co/datasets/zekaiwang/trex_dataset"
+    },
+    {
+      "id": "lerobot/berkeley_cable_routing",
+      "name": "berkeley_cable_routing",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1647,
+      "cameras": 4,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 2139,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_cable_routing"
+    },
+    {
+      "id": "lerobot/taco_play",
+      "name": "taco_play",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 3603,
+      "cameras": 2,
+      "fps": 15,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 827,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/taco_play"
+    },
+    {
+      "id": "cadene/droid",
+      "name": "droid",
+      "owner": "cadene",
+      "robotType": "franka",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 92233,
+      "cameras": 3,
+      "fps": 15,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-02-27",
+      "taskString": "",
+      "downloads": 74126,
+      "hubUrl": "https://huggingface.co/datasets/cadene/droid"
+    },
+    {
+      "id": "kantine/industrial_screws_sorting_expert",
+      "name": "industrial_screws_sorting_expert",
+      "owner": "kantine",
+      "robotType": "so100",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 20,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-03-19",
+      "taskString": "sorting 2 types of screws ",
+      "downloads": 202,
+      "hubUrl": "https://huggingface.co/datasets/kantine/industrial_screws_sorting_expert"
+    },
+    {
+      "id": "jccj/test_multiview_3d_reconstruction",
+      "name": "test_multiview_3d_reconstruction",
+      "owner": "jccj",
+      "robotType": "so100_follower",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 1,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2025-07-25",
+      "taskString": "test record with multiview for 3d reconstruction",
+      "downloads": 68,
+      "hubUrl": "https://huggingface.co/datasets/jccj/test_multiview_3d_reconstruction"
+    },
+    {
+      "id": "LightwheelAI/leisaac-pick-orange",
+      "name": "leisaac-pick-orange",
+      "owner": "LightwheelAI",
+      "robotType": "so101_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 60,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-07-30",
+      "taskString": "Grab orange and place into plate",
+      "downloads": 688,
+      "hubUrl": "https://huggingface.co/datasets/LightwheelAI/leisaac-pick-orange"
+    },
+    {
+      "id": "jccj/test_multiview_3d_reconstruction_3cams",
+      "name": "test_multiview_3d_reconstruction_3cams",
+      "owner": "jccj",
+      "robotType": "so100_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2025-08-07",
+      "taskString": "test record with multiview for 3d reconstruction",
+      "downloads": 44,
+      "hubUrl": "https://huggingface.co/datasets/jccj/test_multiview_3d_reconstruction_3cams"
+    },
+    {
+      "id": "behavior-1k/2025-challenge-demos",
+      "name": "2025-challenge-demos",
+      "owner": "behavior-1k",
+      "robotType": "R1Pro",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 10000,
+      "cameras": 9,
+      "fps": 30,
+      "actionDim": 23,
+      "stateDim": 256,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-12-02",
+      "taskString": "Turn on the radio receiver that's on the table in the living room.",
+      "downloads": 120039,
+      "hubUrl": "https://huggingface.co/datasets/behavior-1k/2025-challenge-demos"
+    },
+    {
+      "id": "lerobot/libero",
+      "name": "libero",
+      "owner": "lerobot",
+      "robotType": "panda",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1693,
+      "cameras": 2,
+      "fps": 10.0,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 12540,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/libero"
+    },
+    {
+      "id": "Gongsta/trlc_tshirt_folding",
+      "name": "trlc_tshirt_folding",
+      "owner": "Gongsta",
+      "robotType": "bi_dk1_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 532,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 28,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-12",
+      "taskString": "",
+      "downloads": 225,
+      "hubUrl": "https://huggingface.co/datasets/Gongsta/trlc_tshirt_folding"
+    },
+    {
+      "id": "robot-learning-group47/eval2_bgr_g",
+      "name": "eval2_bgr_g",
+      "owner": "robot-learning-group47",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 4,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2026-05-14",
+      "taskString": "",
+      "downloads": 35,
+      "hubUrl": "https://huggingface.co/datasets/robot-learning-group47/eval2_bgr_g"
+    },
+    {
+      "id": "Embodied-AI-6/blue_so101_color_blocks_10ep_v1_20260526_175604",
+      "name": "blue_so101_color_blocks_10ep_v1_20260526_175604",
+      "owner": "Embodied-AI-6",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 10,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-05-26",
+      "taskString": "",
+      "downloads": 37,
+      "hubUrl": "https://huggingface.co/datasets/Embodied-AI-6/blue_so101_color_blocks_10ep_v1_20260526_175604"
+    },
+    {
+      "id": "zeno-labs/egostation-iphone-lidar-household-v1",
+      "name": "egostation-iphone-lidar-household-v1",
+      "owner": "zeno-labs",
+      "robotType": "egocentric_head_camera",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 8,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 20,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-08-12",
+      "taskString": "household manipulation",
+      "downloads": 167,
+      "hubUrl": "https://huggingface.co/datasets/zeno-labs/egostation-iphone-lidar-household-v1"
+    },
+    {
+      "id": "jellyho/yam_cable_tie",
+      "name": "yam_cable_tie",
+      "owner": "jellyho",
+      "robotType": "yam_bimanual",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 160,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 14,
+      "stateDim": 42,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-02",
+      "taskString": "",
+      "downloads": 301,
+      "hubUrl": "https://huggingface.co/datasets/jellyho/yam_cable_tie"
+    },
+    {
+      "id": "hu43/square2box",
+      "name": "square2box",
+      "owner": "hu43",
+      "robotType": "xlerobot",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 104,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 12,
+      "stateDim": 12,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-04",
+      "taskString": "",
+      "downloads": 306,
+      "hubUrl": "https://huggingface.co/datasets/hu43/square2box"
+    },
+    {
+      "id": "grahamwichhh/HIL1_episodic-fix-testing_20260910_115227",
+      "name": "HIL1_episodic-fix-testing_20260910_115227",
+      "owner": "grahamwichhh",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 3,
+      "cameras": 4,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2026-09-10",
+      "taskString": "",
+      "downloads": 181,
+      "hubUrl": "https://huggingface.co/datasets/grahamwichhh/HIL1_episodic-fix-testing_20260910_115227"
+    },
+    {
+      "id": "PremPremPrem/fold_the_shirt_20260917_112147",
+      "name": "fold_the_shirt_20260917_112147",
+      "owner": "PremPremPrem",
+      "robotType": "bi_so_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 4,
+      "fps": 30,
+      "actionDim": 12,
+      "stateDim": 12,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-17",
+      "taskString": "",
+      "downloads": 148,
+      "hubUrl": "https://huggingface.co/datasets/PremPremPrem/fold_the_shirt_20260917_112147"
+    },
+    {
+      "id": "Hailey-5-2026/integration-Data-Collection-Dataset",
+      "name": "integration-Data-Collection-Dataset",
+      "owner": "Hailey-5-2026",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 100,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-18",
+      "taskString": "",
+      "downloads": 164,
+      "hubUrl": "https://huggingface.co/datasets/Hailey-5-2026/integration-Data-Collection-Dataset"
+    },
+    {
+      "id": "pixelouie/dual_cam_test_3",
+      "name": "dual_cam_test_3",
+      "owner": "pixelouie",
+      "robotType": "nema_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 101,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 4,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-18",
+      "taskString": "",
+      "downloads": 140,
+      "hubUrl": "https://huggingface.co/datasets/pixelouie/dual_cam_test_3"
+    },
+    {
+      "id": "mrkschtr/imperio_lego",
+      "name": "imperio_lego",
+      "owner": "mrkschtr",
+      "robotType": "so101_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1854,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-19",
+      "taskString": "",
+      "downloads": 114,
+      "hubUrl": "https://huggingface.co/datasets/mrkschtr/imperio_lego"
+    },
+    {
+      "id": "gdiazsrl/three_blocks_stack_sep22",
+      "name": "three_blocks_stack_sep22",
+      "owner": "gdiazsrl",
+      "robotType": "moonbot_teleop",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 296,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 8,
+      "stateDim": 21,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-22",
+      "taskString": "",
+      "downloads": 84,
+      "hubUrl": "https://huggingface.co/datasets/gdiazsrl/three_blocks_stack_sep22"
+    },
+    {
+      "id": "alex07121/lerobot-so-arm-101",
+      "name": "lerobot-so-arm-101",
+      "owner": "alex07121",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 10,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-23",
+      "taskString": "",
+      "downloads": 19,
+      "hubUrl": "https://huggingface.co/datasets/alex07121/lerobot-so-arm-101"
+    },
+    {
+      "id": "Tridex/50_gazeuse_10h30_23-09_20260923_103845",
+      "name": "50_gazeuse_10h30_23-09_20260923_103845",
+      "owner": "Tridex",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-09-23",
+      "taskString": "",
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Tridex/50_gazeuse_10h30_23-09_20260923_103845"
+    },
+    {
+      "id": "Aaaay-0610/so101-test-1_20260923_182449",
+      "name": "so101-test-1_20260923_182449",
+      "owner": "Aaaay-0610",
+      "robotType": "so_follower",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 3,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2026-09-23",
+      "taskString": "",
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Aaaay-0610/so101-test-1_20260923_182449"
+    },
+    {
+      "id": "lerobot/pusht",
+      "name": "pusht",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 206,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 2,
+      "stateDim": 2,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 16093,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/pusht"
+    },
+    {
+      "id": "lerobot/aloha_sim_insertion_human",
+      "name": "aloha_sim_insertion_human",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 9224,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_insertion_human"
+    },
+    {
+      "id": "lerobot/aloha_sim_insertion_scripted",
+      "name": "aloha_sim_insertion_scripted",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 7378,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_insertion_scripted"
+    },
+    {
+      "id": "lerobot/aloha_sim_transfer_cube_human",
+      "name": "aloha_sim_transfer_cube_human",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 18146,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_human"
+    },
+    {
+      "id": "lerobot/aloha_sim_transfer_cube_scripted",
+      "name": "aloha_sim_transfer_cube_scripted",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 5741,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_scripted"
+    },
+    {
+      "id": "lerobot/xarm_lift_medium",
+      "name": "xarm_lift_medium",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 4,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 5020,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_lift_medium"
+    },
+    {
+      "id": "lerobot/xarm_lift_medium_replay",
+      "name": "xarm_lift_medium_replay",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 4,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1313,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_lift_medium_replay"
+    },
+    {
+      "id": "lerobot/xarm_push_medium",
+      "name": "xarm_push_medium",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1818,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_push_medium"
+    },
+    {
+      "id": "lerobot/xarm_push_medium_replay",
+      "name": "xarm_push_medium_replay",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1202,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_push_medium_replay"
+    },
+    {
+      "id": "lerobot/umi_cup_in_the_wild",
+      "name": "umi_cup_in_the_wild",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1447,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": null,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 642,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/umi_cup_in_the_wild"
+    },
+    {
+      "id": "lerobot/aloha_static_screw_driver",
+      "name": "aloha_static_screw_driver",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 741,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_screw_driver"
+    },
+    {
+      "id": "lerobot/aloha_static_candy",
+      "name": "aloha_static_candy",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 964,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_candy"
+    },
+    {
+      "id": "lerobot/aloha_static_tape",
+      "name": "aloha_static_tape",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 720,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_tape"
+    },
+    {
+      "id": "lerobot/aloha_mobile_wipe_wine",
+      "name": "aloha_mobile_wipe_wine",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 822,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_wipe_wine"
+    },
+    {
+      "id": "lerobot/aloha_static_thread_velcro",
+      "name": "aloha_static_thread_velcro",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 49,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 3296,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_thread_velcro"
+    },
+    {
+      "id": "lerobot/aloha_static_battery",
+      "name": "aloha_static_battery",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 49,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 1040,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_battery"
+    },
+    {
+      "id": "lerobot/aloha_static_coffee",
+      "name": "aloha_static_coffee",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1727,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_coffee"
+    },
+    {
+      "id": "lerobot/aloha_static_towel",
+      "name": "aloha_static_towel",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-12-12",
+      "taskString": "",
+      "downloads": 960,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_towel"
+    },
+    {
+      "id": "lerobot/aloha_static_vinh_cup",
+      "name": "aloha_static_vinh_cup",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 101,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 779,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_vinh_cup"
+    },
+    {
+      "id": "lerobot/aloha_static_vinh_cup_left",
+      "name": "aloha_static_vinh_cup_left",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 656,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_vinh_cup_left"
+    },
+    {
+      "id": "lerobot/aloha_static_ziploc_slide",
+      "name": "aloha_static_ziploc_slide",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 56,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 598,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_ziploc_slide"
+    },
+    {
+      "id": "lerobot/aloha_static_coffee_new",
+      "name": "aloha_static_coffee_new",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 577,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_coffee_new"
+    },
+    {
+      "id": "lerobot/aloha_static_cups_open",
+      "name": "aloha_static_cups_open",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1430,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_cups_open"
+    },
+    {
+      "id": "lerobot/aloha_static_fork_pick_up",
+      "name": "aloha_static_fork_pick_up",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 565,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_fork_pick_up"
+    },
+    {
+      "id": "lerobot/aloha_static_pingpong_test",
+      "name": "aloha_static_pingpong_test",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 10,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 556,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_pingpong_test"
+    },
+    {
+      "id": "lerobot/aloha_static_pro_pencil",
+      "name": "aloha_static_pro_pencil",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 25,
+      "cameras": 4,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 664,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_static_pro_pencil"
+    },
+    {
+      "id": "lerobot/aloha_mobile_shrimp",
+      "name": "aloha_mobile_shrimp",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 18,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 1235,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_shrimp"
+    },
+    {
+      "id": "lerobot/aloha_mobile_wash_pan",
+      "name": "aloha_mobile_wash_pan",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 522,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_wash_pan"
+    },
+    {
+      "id": "lerobot/pusht_image",
+      "name": "pusht_image",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 206,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 2,
+      "stateDim": 2,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 4646,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/pusht_image"
+    },
+    {
+      "id": "lerobot/xarm_lift_medium_image",
+      "name": "xarm_lift_medium_image",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 1015,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_lift_medium_image"
+    },
+    {
+      "id": "lerobot/xarm_lift_medium_replay_image",
+      "name": "xarm_lift_medium_replay_image",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 1005,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_lift_medium_replay_image"
+    },
+    {
+      "id": "lerobot/xarm_push_medium_image",
+      "name": "xarm_push_medium_image",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 998,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_push_medium_image"
+    },
+    {
+      "id": "lerobot/xarm_push_medium_replay_image",
+      "name": "xarm_push_medium_replay_image",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 800,
+      "cameras": 1,
+      "fps": 15,
+      "actionDim": 3,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 990,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/xarm_push_medium_replay_image"
+    },
+    {
+      "id": "lerobot/aloha_mobile_cabinet",
+      "name": "aloha_mobile_cabinet",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 85,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-10-23",
+      "taskString": "",
+      "downloads": 2332,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_cabinet"
+    },
+    {
+      "id": "lerobot/aloha_mobile_chair",
+      "name": "aloha_mobile_chair",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 55,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 598,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_chair"
+    },
+    {
+      "id": "lerobot/aloha_mobile_elevator",
+      "name": "aloha_mobile_elevator",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 20,
+      "cameras": 3,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 489,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_mobile_elevator"
+    },
+    {
+      "id": "lerobot/aloha_sim_insertion_scripted_image",
+      "name": "aloha_sim_insertion_scripted_image",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 3968,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_insertion_scripted_image"
+    },
+    {
+      "id": "lerobot/aloha_sim_transfer_cube_human_image",
+      "name": "aloha_sim_transfer_cube_human_image",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 3925,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_human_image"
+    },
+    {
+      "id": "lerobot/aloha_sim_transfer_cube_scripted_image",
+      "name": "aloha_sim_transfer_cube_scripted_image",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 3976,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_scripted_image"
+    },
+    {
+      "id": "lerobot/aloha_sim_insertion_human_image",
+      "name": "aloha_sim_insertion_human_image",
+      "owner": "lerobot",
+      "robotType": "aloha",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 50,
+      "actionDim": 14,
+      "stateDim": 14,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-06-08",
+      "taskString": "",
+      "downloads": 4228,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/aloha_sim_insertion_human_image"
+    },
+    {
+      "id": "lerobot/unitreeh1_rearrange_objects",
+      "name": "unitreeh1_rearrange_objects",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 30,
+      "cameras": 2,
+      "fps": 50,
+      "actionDim": 40,
+      "stateDim": 19,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 189,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/unitreeh1_rearrange_objects"
+    },
+    {
+      "id": "lerobot/unitreeh1_two_robot_greeting",
+      "name": "unitreeh1_two_robot_greeting",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 30,
+      "cameras": 2,
+      "fps": 50,
+      "actionDim": 40,
+      "stateDim": 19,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 211,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/unitreeh1_two_robot_greeting"
+    },
+    {
+      "id": "lerobot/unitreeh1_warehouse",
+      "name": "unitreeh1_warehouse",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 24,
+      "cameras": 2,
+      "fps": 50,
+      "actionDim": 40,
+      "stateDim": 19,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 257,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/unitreeh1_warehouse"
+    },
+    {
+      "id": "lerobot/unitreeh1_fold_clothes",
+      "name": "unitreeh1_fold_clothes",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 38,
+      "cameras": 2,
+      "fps": 50,
+      "actionDim": 40,
+      "stateDim": 19,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 271,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/unitreeh1_fold_clothes"
+    },
+    {
+      "id": "lerobot/pusht_keypoints",
+      "name": "pusht_keypoints",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 206,
+      "cameras": 0,
+      "fps": 10,
+      "actionDim": 2,
+      "stateDim": 2,
+      "q": {
+        "key": "broken",
+        "label": "Broken",
+        "color": "var(--critical)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 1571,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/pusht_keypoints"
+    },
+    {
+      "id": "aractingi/pusht",
+      "name": "pusht",
+      "owner": "aractingi",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 206,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 2,
+      "stateDim": 2,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-10-02",
+      "taskString": "",
+      "downloads": 103,
+      "hubUrl": "https://huggingface.co/datasets/aractingi/pusht"
+    },
+    {
+      "id": "lerobot/nyu_rot_dataset",
+      "name": "nyu_rot_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 14,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 296,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/nyu_rot_dataset"
+    },
+    {
+      "id": "lerobot/tokyo_u_lsmo",
+      "name": "tokyo_u_lsmo",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 13,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 319,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/tokyo_u_lsmo"
+    },
+    {
+      "id": "lerobot/utokyo_pr2_opening_fridge",
+      "name": "utokyo_pr2_opening_fridge",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 80,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 405,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utokyo_pr2_opening_fridge"
+    },
+    {
+      "id": "lerobot/cmu_stretch",
+      "name": "cmu_stretch",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 135,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 4,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 363,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/cmu_stretch"
+    },
+    {
+      "id": "lerobot/asu_table_top",
+      "name": "asu_table_top",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 110,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 383,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/asu_table_top"
+    },
+    {
+      "id": "lerobot/utokyo_pr2_tabletop_manipulation",
+      "name": "utokyo_pr2_tabletop_manipulation",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 240,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 566,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utokyo_pr2_tabletop_manipulation"
+    },
+    {
+      "id": "lerobot/ucsd_kitchen_dataset",
+      "name": "ucsd_kitchen_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 150,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 21,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 575,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/ucsd_kitchen_dataset"
+    },
+    {
+      "id": "lerobot/austin_buds_dataset",
+      "name": "austin_buds_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 24,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 502,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/austin_buds_dataset"
+    },
+    {
+      "id": "lerobot/dlr_sara_grid_clamp",
+      "name": "dlr_sara_grid_clamp",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 107,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 12,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 319,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/dlr_sara_grid_clamp"
+    },
+    {
+      "id": "lerobot/dlr_sara_pour",
+      "name": "dlr_sara_pour",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 322,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/dlr_sara_pour"
+    },
+    {
+      "id": "lerobot/dlr_edan_shared_control",
+      "name": "dlr_edan_shared_control",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 104,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 319,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/dlr_edan_shared_control"
+    },
+    {
+      "id": "lerobot/ucsd_pick_and_place_dataset",
+      "name": "ucsd_pick_and_place_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1355,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 4,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 735,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/ucsd_pick_and_place_dataset"
+    },
+    {
+      "id": "lerobot/nyu_franka_play_dataset",
+      "name": "nyu_franka_play_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 456,
+      "cameras": 2,
+      "fps": 5,
+      "actionDim": 15,
+      "stateDim": 13,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 572,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/nyu_franka_play_dataset"
+    },
+    {
+      "id": "lerobot/utokyo_saytap",
+      "name": "utokyo_saytap",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 20,
+      "cameras": 2,
+      "fps": 5,
+      "actionDim": 12,
+      "stateDim": 30,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 333,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utokyo_saytap"
+    },
+    {
+      "id": "lerobot/imperialcollege_sawyer_wrist_cam",
+      "name": "imperialcollege_sawyer_wrist_cam",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 170,
+      "cameras": 2,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 1,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 447,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/imperialcollege_sawyer_wrist_cam"
+    },
+    {
+      "id": "lerobot/utokyo_xarm_bimanual",
+      "name": "utokyo_xarm_bimanual",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 70,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 491,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utokyo_xarm_bimanual"
+    },
+    {
+      "id": "lerobot/cmu_franka_exploration_dataset",
+      "name": "cmu_franka_exploration_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 199,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 330,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/cmu_franka_exploration_dataset"
+    },
+    {
+      "id": "lerobot/utokyo_xarm_pick_and_place",
+      "name": "utokyo_xarm_pick_and_place",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 102,
+      "cameras": 3,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 526,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utokyo_xarm_pick_and_place"
+    },
+    {
+      "id": "lerobot/columbia_cairlab_pusht_real",
+      "name": "columbia_cairlab_pusht_real",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 136,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 421,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/columbia_cairlab_pusht_real"
+    },
+    {
+      "id": "lerobot/uiuc_d3field",
+      "name": "uiuc_d3field",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 192,
+      "cameras": 4,
+      "fps": 1,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 286,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/uiuc_d3field"
+    },
+    {
+      "id": "lerobot/conq_hose_manipulation",
+      "name": "conq_hose_manipulation",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 139,
+      "cameras": 3,
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 68,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 275,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/conq_hose_manipulation"
+    },
+    {
+      "id": "lerobot/berkeley_gnm_sac_son",
+      "name": "berkeley_gnm_sac_son",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 2955,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 290,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_gnm_sac_son"
+    },
+    {
+      "id": "lerobot/cmu_play_fusion",
+      "name": "cmu_play_fusion",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 576,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 320,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/cmu_play_fusion"
+    },
+    {
+      "id": "lerobot/berkeley_fanuc_manipulation",
+      "name": "berkeley_fanuc_manipulation",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 415,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 340,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_fanuc_manipulation"
+    },
+    {
+      "id": "lerobot/jaco_play",
+      "name": "jaco_play",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1085,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 478,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/jaco_play"
+    },
+    {
+      "id": "lerobot/kaist_nonprehensile",
+      "name": "kaist_nonprehensile",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 201,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 291,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/kaist_nonprehensile"
+    },
+    {
+      "id": "lerobot/koch_pick_place_1_lego_raph",
+      "name": "koch_pick_place_1_lego_raph",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 170,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/koch_pick_place_1_lego_raph"
+    },
+    {
+      "id": "lerobot/berkeley_gnm_recon",
+      "name": "berkeley_gnm_recon",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 11834,
+      "cameras": 1,
+      "fps": 3,
+      "actionDim": 7,
+      "stateDim": 9,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 414,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_gnm_recon"
+    },
+    {
+      "id": "lerobot/nyu_door_opening_surprising_effectiveness",
+      "name": "nyu_door_opening_surprising_effectiveness",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 484,
+      "cameras": 1,
+      "fps": 3,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 360,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/nyu_door_opening_surprising_effectiveness"
+    },
+    {
+      "id": "lerobot/austin_sirius_dataset",
+      "name": "austin_sirius_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 559,
+      "cameras": 2,
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 494,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/austin_sirius_dataset"
+    },
+    {
+      "id": "lerobot/austin_sailor_dataset",
+      "name": "austin_sailor_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 240,
+      "cameras": 2,
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 391,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/austin_sailor_dataset"
+    },
+    {
+      "id": "lerobot/berkeley_autolab_ur5",
+      "name": "berkeley_autolab_ur5",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1000,
+      "cameras": 3,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 860,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_autolab_ur5"
+    },
+    {
+      "id": "lerobot/utaustin_mutex",
+      "name": "utaustin_mutex",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 1500,
+      "cameras": 2,
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 655,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/utaustin_mutex"
+    },
+    {
+      "id": "lerobot/stanford_hydra_dataset",
+      "name": "stanford_hydra_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 570,
+      "cameras": 2,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 546,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/stanford_hydra_dataset"
+    },
+    {
+      "id": "lerobot/berkeley_mvp",
+      "name": "berkeley_mvp",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 480,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 8,
+      "stateDim": 15,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 366,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_mvp"
+    },
+    {
+      "id": "lerobot/koch_pick_place_1_lego",
+      "name": "koch_pick_place_1_lego",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 102,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 243,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/koch_pick_place_1_lego"
+    },
+    {
+      "id": "lerobot/koch_pick_place_5_lego_random_pose",
+      "name": "koch_pick_place_5_lego_random_pose",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 201,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/koch_pick_place_5_lego_random_pose"
+    },
+    {
+      "id": "lerobot/koch_pick_place_5_lego",
+      "name": "koch_pick_place_5_lego",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 209,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/koch_pick_place_5_lego"
+    },
+    {
+      "id": "lerobot/stanford_robocook",
+      "name": "stanford_robocook",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 2460,
+      "cameras": 4,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 708,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/stanford_robocook"
+    },
+    {
+      "id": "lerobot/toto",
+      "name": "toto",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1003,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 538,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/toto"
+    },
+    {
+      "id": "lerobot/roboturk",
+      "name": "roboturk",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1995,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 447,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/roboturk"
+    },
+    {
+      "id": "lerobot/fmb",
+      "name": "fmb",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1804,
+      "cameras": 4,
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 371,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/fmb"
+    },
+    {
+      "id": "lerobot/droid_100",
+      "name": "droid_100",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 100,
+      "cameras": 3,
+      "fps": 15,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 2262,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/droid_100"
+    },
+    {
+      "id": "jackvial/koch_test",
+      "name": "koch_test",
+      "owner": "jackvial",
+      "robotType": "koch",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 2,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "minor",
+        "label": "Minor flags",
+        "color": "var(--warning)"
+      },
+      "lastUpload": "2024-12-08",
+      "taskString": "test_description",
+      "downloads": 54,
+      "hubUrl": "https://huggingface.co/datasets/jackvial/koch_test"
+    },
+    {
+      "id": "aliberts/koch_tutorial",
+      "name": "koch_tutorial",
+      "owner": "aliberts",
+      "robotType": "koch",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-02-14",
+      "taskString": "Pick the Lego block and drop it in the box on the right.",
+      "downloads": 470,
+      "hubUrl": "https://huggingface.co/datasets/aliberts/koch_tutorial"
+    },
+    {
+      "id": "lerobot/berkeley_rpt",
+      "name": "berkeley_rpt",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 908,
+      "cameras": 1,
+      "fps": 30,
+      "actionDim": 8,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 362,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_rpt"
+    },
+    {
+      "id": "lerobot/stanford_kuka_multimodal_dataset",
+      "name": "stanford_kuka_multimodal_dataset",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 3000,
+      "cameras": 1,
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 7,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2025-09-27",
+      "taskString": "",
+      "downloads": 1043,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/stanford_kuka_multimodal_dataset"
+    },
+    {
+      "id": "lerobot/iamlab_cmu_pickup_insert",
+      "name": "iamlab_cmu_pickup_insert",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 631,
+      "cameras": 2,
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 8,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-06",
+      "taskString": "",
+      "downloads": 310,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/iamlab_cmu_pickup_insert"
+    },
+    {
+      "id": "lerobot/berkeley_gnm_cory_hall",
+      "name": "berkeley_gnm_cory_hall",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 7331,
+      "cameras": 1,
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 9,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-09",
+      "taskString": "",
+      "downloads": 662,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/berkeley_gnm_cory_hall"
+    },
+    {
+      "id": "lerobot/usc_cloth_sim",
+      "name": "usc_cloth_sim",
+      "owner": "lerobot",
+      "robotType": "unknown",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1000,
+      "cameras": 1,
+      "fps": 10,
+      "actionDim": 4,
+      "stateDim": 1,
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "lastUpload": "2026-03-10",
+      "taskString": "",
+      "downloads": 646,
+      "hubUrl": "https://huggingface.co/datasets/lerobot/usc_cloth_sim"
+    }
+  ]
+}

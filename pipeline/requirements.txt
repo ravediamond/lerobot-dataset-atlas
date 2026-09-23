@@ -1,0 +1,3 @@
+huggingface_hub>=0.26
+anthropic>=0.40
+tqdm>=4.66
