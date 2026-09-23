@@ -1,6 +1,6 @@
-"""Merge classified.json into the JSON shape space/index.html fetches.
+"""Merge pipeline/state/datasets.json into the JSON shape space/index.html fetches.
 
-Usage: python build.py --in out/classified.json --out ../space/data/datasets.json
+Usage: python build.py [--in state/datasets.json] [--out ../space/data/datasets.json]
 """
 
 from __future__ import annotations
@@ -49,11 +49,12 @@ def to_row(r: dict) -> dict:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--in", dest="inp", type=Path, default=Path(__file__).parent / "out" / "classified.json")
+    parser.add_argument("--in", dest="inp", type=Path, default=Path(__file__).parent / "state" / "datasets.json")
     parser.add_argument("--out", type=Path, default=Path(__file__).parent.parent / "space" / "data" / "datasets.json")
     args = parser.parse_args()
 
-    records = json.loads(args.inp.read_text())
+    state = json.loads(args.inp.read_text())
+    records = [r for r in state.values() if "error" not in r]
     rows = [to_row(r) for r in records]
 
     args.out.parent.mkdir(parents=True, exist_ok=True)

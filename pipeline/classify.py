@@ -51,7 +51,7 @@ PROMPT_TMPL = (
 )
 
 
-def _classify_single(client, record: dict) -> tuple[str, str]:
+def classify_llm_single(client, record: dict) -> tuple[str, str]:
     try:
         resp = client.chat_completion(
             model=LLM_MODEL,
@@ -71,7 +71,7 @@ def classify_llm(records: list[dict], max_workers: int = 8) -> dict[str, str]:
     client = InferenceClient()  # uses HF_TOKEN / cached `hf auth login` credential
     out: dict[str, str] = {}
     with ThreadPoolExecutor(max_workers=max_workers) as pool:
-        futures = [pool.submit(_classify_single, client, r) for r in records]
+        futures = [pool.submit(classify_llm_single, client, r) for r in records]
         for fut in tqdm(as_completed(futures), total=len(futures), desc="classifying (hf inference)"):
             repo_id, cat = fut.result()
             out[repo_id] = cat

@@ -3,12 +3,7 @@ name: Refresh dataset atlas
 on:
   schedule:
     - cron: "17 4 * * *" # daily, 04:17 UTC
-  workflow_dispatch:
-    inputs:
-      limit:
-        description: "Max datasets to discover (blank = all)"
-        required: false
-        default: ""
+  workflow_dispatch: {}
 
 jobs:
   refresh:
@@ -23,37 +18,27 @@ jobs:
       - name: Install pipeline deps
         run: pip install -r pipeline/requirements.txt
 
-      - name: Discover
-        run: python pipeline/discover.py ${{ inputs.limit && format('--limit {0}', inputs.limit) || '' }}
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-
-      - name: Analyze
-        run: python pipeline/analyze.py
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKEN }}
-
-      - name: Classify (HF Inference)
-        run: python pipeline/classify.py --mode llm
+      - name: Incremental update (new/changed datasets only)
+        working-directory: pipeline
+        run: python update.py --mode llm
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
       - name: Build site data
-        run: python pipeline/build.py
+        working-directory: pipeline
+        run: python build.py
 
       - name: Commit data to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add space/data/datasets.json
-          git diff --cached --quiet || git commit -m "chore: refresh dataset atlas data"
+          git add pipeline/state/datasets.json space/data/datasets.json
+          git diff --cached --quiet || git commit -m "chore: daily dataset atlas refresh"
           git push
 
       - name: Publish to HF Space
         run: |
           pip install -U "huggingface_hub[cli]"
           hf upload ravediamond/lerobot-dataset-atlas space/data/datasets.json data/datasets.json --repo-type space
-          hf upload ravediamond/lerobot-dataset-atlas space/index.html index.html --repo-type space
-          hf upload ravediamond/lerobot-dataset-atlas space/README.md README.md --repo-type space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
