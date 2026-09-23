@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import signal
 import sys
 import time
@@ -27,7 +28,13 @@ from pathlib import Path
 from tqdm import tqdm
 
 from analyze import analyze_one
-from classify import QuotaExceededError, classify_heuristic, classify_llm_single, text_for
+from classify import (
+    QuotaExceededError,
+    classify_gemini_single,
+    classify_heuristic,
+    classify_llm_single,
+    text_for,
+)
 from discover import discover
 
 STATE_PATH = Path(__file__).parent / "state" / "datasets.json"
@@ -47,7 +54,7 @@ def save_state(state: dict) -> None:
     tmp.replace(STATE_PATH)  # atomic on POSIX + Windows
 
 
-def process_one(row: dict, mode: str, llm_client) -> tuple[str, dict]:
+def process_one(row: dict, mode: str, client) -> tuple[str, dict]:
     repo_id = row["id"]
     try:
         rec = analyze_one(repo_id, tags=row.get("tags"))
@@ -62,7 +69,9 @@ def process_one(row: dict, mode: str, llm_client) -> tuple[str, dict]:
     rec["last_modified"] = row.get("last_modified")
 
     if mode == "llm":
-        _, cat = classify_llm_single(llm_client, rec)
+        _, cat = classify_llm_single(client, rec)
+    elif mode == "gemini":
+        _, cat = classify_gemini_single(client, rec)
     else:
         cat = classify_heuristic(text_for(rec))
     rec["category"] = cat
@@ -71,7 +80,7 @@ def process_one(row: dict, mode: str, llm_client) -> tuple[str, dict]:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["heuristic", "llm"], default="llm")
+    parser.add_argument("--mode", choices=["heuristic", "llm", "gemini"], default="llm")
     parser.add_argument("--limit", type=int, default=None, help="cap discovery, for test runs")
     parser.add_argument("--workers", type=int, default=20)
     parser.add_argument("--force", action="store_true", help="re-process datasets already in state")
@@ -89,11 +98,16 @@ def main():
         print("nothing to do")
         return
 
-    llm_client = None
+    client = None
     if args.mode == "llm":
         from huggingface_hub import InferenceClient
 
-        llm_client = InferenceClient()
+        client = InferenceClient()
+    elif args.mode == "gemini":
+        from google import genai
+
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        args.workers = min(args.workers, 4)  # respect free-tier rate limits
 
     completed_since_checkpoint = 0
     stop_requested = False
@@ -108,7 +122,7 @@ def main():
     signal.signal(signal.SIGINT, handle_sigint)
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(process_one, row, args.mode, llm_client): row["id"] for row in todo}
+        futures = {pool.submit(process_one, row, args.mode, client): row["id"] for row in todo}
         pbar = tqdm(as_completed(futures), total=len(futures), desc=f"backfill ({args.mode})")
         for fut in pbar:
             if stop_requested:
@@ -118,7 +132,7 @@ def main():
             try:
                 repo_id, rec = fut.result()
             except QuotaExceededError as e:
-                print(f"\nHF Inference quota hit: {e}\nstopping — checkpointing and exiting.")
+                print(f"\n{args.mode} quota/rate limit hit: {e}\nstopping — checkpointing and exiting.")
                 for f in futures:
                     f.cancel()
                 stop_requested = True

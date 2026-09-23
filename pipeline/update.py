@@ -2,12 +2,13 @@
 last_modified changed since the last run. Reads/writes the same
 pipeline/state/datasets.json that backfill.py produces.
 
-Usage: python update.py [--mode heuristic|llm] [--workers 20]
+Usage: python update.py [--mode heuristic|llm|gemini] [--workers 20]
 """
 
 from __future__ import annotations
 
 import argparse
+import os
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 from tqdm import tqdm
@@ -19,7 +20,7 @@ from discover import discover
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["heuristic", "llm"], default="llm")
+    parser.add_argument("--mode", choices=["heuristic", "llm", "gemini"], default="llm")
     parser.add_argument("--workers", type=int, default=20)
     args = parser.parse_args()
 
@@ -49,19 +50,24 @@ def main():
         print("no changes; state re-saved for the removals above")
         return
 
-    llm_client = None
+    client = None
     if args.mode == "llm":
         from huggingface_hub import InferenceClient
 
-        llm_client = InferenceClient()
+        client = InferenceClient()
+    elif args.mode == "gemini":
+        from google import genai
+
+        client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        args.workers = min(args.workers, 4)  # respect free-tier rate limits
 
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures = [pool.submit(process_one, row, args.mode, llm_client) for row in todo]
+        futures = [pool.submit(process_one, row, args.mode, client) for row in todo]
         for fut in tqdm(as_completed(futures), total=len(futures), desc=f"update ({args.mode})"):
             try:
                 repo_id, rec = fut.result()
             except QuotaExceededError as e:
-                print(f"\nHF Inference quota hit: {e}\nstopping — checkpointing and exiting.")
+                print(f"\n{args.mode} quota/rate limit hit: {e}\nstopping — checkpointing and exiting.")
                 for f in futures:
                     f.cancel()
                 break

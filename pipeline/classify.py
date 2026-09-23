@@ -1,17 +1,18 @@
 """Normalize each dataset's task string(s) into a fixed category taxonomy.
 
-Two modes:
+Three modes:
   --mode heuristic   keyword match, no API key needed, runs instantly (default)
-  --mode llm         HF Inference calls (concurrent, not a true batch endpoint),
-                      needs HF_TOKEN, higher quality on ambiguous task strings
+  --mode llm         HF Inference calls (concurrent), needs HF_TOKEN, small paid cost
+  --mode gemini       Google AI Studio Gemini API, needs GEMINI_API_KEY, free tier
 
-Usage: python classify.py --in out/analyzed.json [--out out/classified.json] [--mode heuristic|llm]
+Usage: python classify.py --in out/analyzed.json [--out out/classified.json] [--mode heuristic|llm|gemini]
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
@@ -55,6 +56,9 @@ QUOTA_MARKERS = (
     "payment required",
     "quota",
     "exceeded your",
+    "resource_exhausted",
+    "resource exhausted",
+    "rate limit",
 )
 
 
@@ -99,17 +103,52 @@ def classify_llm(records: list[dict], max_workers: int = 8) -> dict[str, str]:
     return out
 
 
+GEMINI_MODEL = "gemini-3.5-flash-lite"
+
+
+def classify_gemini_single(client, record: dict) -> tuple[str, str]:
+    try:
+        resp = client.models.generate_content(
+            model=GEMINI_MODEL,
+            contents=PROMPT_TMPL.format(text=text_for(record)[:400]),
+        )
+        text = (resp.text or "").strip().lower()
+        cleaned = re.sub(r"[^a-z_]", "", text)
+        return record["id"], (cleaned if cleaned in CATEGORIES else "other")
+    except Exception as e:
+        if _is_quota_error(e):
+            raise QuotaExceededError(str(e)) from e
+        return record["id"], "other"  # transient/other error: fall back, don't kill the run
+
+
+def classify_gemini(records: list[dict], max_workers: int = 4) -> dict[str, str]:
+    from google import genai
+
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    out: dict[str, str] = {}
+    with ThreadPoolExecutor(max_workers=max_workers) as pool:
+        futures = [pool.submit(classify_gemini_single, client, r) for r in records]
+        for fut in tqdm(as_completed(futures), total=len(futures), desc="classifying (gemini)"):
+            repo_id, cat = fut.result()
+            out[repo_id] = cat
+    return out
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--in", dest="inp", type=Path, default=Path(__file__).parent / "out" / "analyzed.json")
     parser.add_argument("--out", type=Path, default=Path(__file__).parent / "out" / "classified.json")
-    parser.add_argument("--mode", choices=["heuristic", "llm"], default="heuristic")
+    parser.add_argument("--mode", choices=["heuristic", "llm", "gemini"], default="heuristic")
     args = parser.parse_args()
 
     records = json.loads(args.inp.read_text())
 
     if args.mode == "llm":
         cat_by_id = classify_llm(records)
+        for r in records:
+            r["category"] = cat_by_id.get(r["id"], "other")
+    elif args.mode == "gemini":
+        cat_by_id = classify_gemini(records)
         for r in records:
             r["category"] = cat_by_id.get(r["id"], "other")
     else:
