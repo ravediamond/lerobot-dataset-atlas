@@ -20,7 +20,7 @@ Live demo: https://huggingface.co/spaces/ravediamond/lerobot-dataset-atlas
 4. **Build** (`pipeline/build.py`) — merge into `space/data/datasets.json`, the
    file the static page fetches.
 
-Runs weekly via `.github/workflows/refresh.yml` — needs one repo secret,
+Runs daily via `.github/workflows/refresh.yml` — needs one repo secret,
 `HF_TOKEN` (write access to the Space), used for both Hub reads and HF Inference.
 
 ## Repo layout
