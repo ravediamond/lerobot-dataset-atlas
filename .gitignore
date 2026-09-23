@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 .env
 pipeline/out/
+pipeline/state/

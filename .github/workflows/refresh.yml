@@ -16,7 +16,16 @@ jobs:
           python-version: "3.12"
 
       - name: Install pipeline deps
-        run: pip install -r pipeline/requirements.txt
+        run: |
+          pip install -r pipeline/requirements.txt
+          pip install -U "huggingface_hub[cli]"
+
+      - name: Pull pipeline state (too large for git — lives in a private HF dataset repo)
+        run: |
+          mkdir -p pipeline/state
+          hf download ravediamond/lerobot-dataset-atlas-state datasets.json --repo-type dataset --local-dir pipeline/state
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
 
       - name: Incremental update (new/changed datasets only)
         working-directory: pipeline
@@ -28,17 +37,20 @@ jobs:
         working-directory: pipeline
         run: python build.py
 
-      - name: Commit data to repo
+      - name: Push updated state back to HF
+        run: hf upload ravediamond/lerobot-dataset-atlas-state pipeline/state/datasets.json datasets.json --repo-type dataset
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+
+      - name: Commit site data to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add pipeline/state/datasets.json space/data/datasets.json
+          git add space/data/datasets.json
           git diff --cached --quiet || git commit -m "chore: daily dataset atlas refresh"
           git push
 
       - name: Publish to HF Space
-        run: |
-          pip install -U "huggingface_hub[cli]"
-          hf upload ravediamond/lerobot-dataset-atlas space/data/datasets.json data/datasets.json --repo-type space
+        run: hf upload ravediamond/lerobot-dataset-atlas space/data/datasets.json data/datasets.json --repo-type space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
