@@ -29,9 +29,10 @@ jobs:
 
       - name: Incremental update (new/changed datasets only)
         working-directory: pipeline
-        run: python update.py --mode llm
+        run: python update.py --mode gemini
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Build site data
         working-directory: pipeline
