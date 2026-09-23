@@ -33,6 +33,7 @@ def to_row(r: dict) -> dict:
         "name": name,
         "owner": owner,
         "robotType": r.get("robot_type") or "unknown",
+        "bimanual": bool(r.get("bimanual")),
         "cat": {"key": r.get("category", "other"), **cat},
         "episodes": r.get("episodes", 0),
         "cameras": r.get("cameras", 0),

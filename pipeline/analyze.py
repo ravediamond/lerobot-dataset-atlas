@@ -17,6 +17,53 @@ from tqdm import tqdm
 
 VALID_FPS = {5, 10, 15, 20, 24, 25, 30, 50, 60}
 
+# ordered by specificity — first match wins
+HARDWARE_KEYWORDS = [
+    ("so101", "so101"), ("so100", "so100"), ("koch", "koch"), ("aloha", "aloha"),
+    ("xarm", "xarm"), ("umi", "umi"), ("widowx", "widowx"), ("ur5e", "ur5e"),
+    ("ur5", "ur5"), ("ur10", "ur10"), ("panda", "panda"), ("franka", "franka"),
+    ("stretch", "stretch"), ("piper", "piper"), ("moss", "moss"), ("arx5", "arx5"),
+    ("reachy", "reachy"), ("mycobot", "mycobot"), ("myarm", "myarm"), ("lekiwi", "lekiwi"),
+]
+
+# messy raw values seen in the wild -> canonical name
+ROBOT_TYPE_ALIASES = {
+    "so-100": "so100", "so100_ws": "so100", "so100_follower": "so100",
+    "so101_follower": "so101", "aloha-stationary": "aloha", "so_follower": "so100",
+}
+SUFFIX_STRIP = ("_follower", "-follower", "_ws", "-ws")
+
+
+def infer_robot_type_from_id(repo_id: str) -> str | None:
+    name = repo_id.split("/", 1)[-1].lower()
+    for kw, canon in HARDWARE_KEYWORDS:
+        if kw in name:
+            return canon
+    return None
+
+
+def normalize_robot_type(raw: str | None, repo_id: str) -> tuple[str, bool]:
+    """Returns (canonical robot type, is_bimanual). Falls back to inferring the
+    type from the dataset name when the metadata field is missing/unset."""
+    val = (raw or "").strip().lower()
+    if not val or val == "unknown":
+        return (infer_robot_type_from_id(repo_id) or "unknown"), False
+
+    bimanual = False
+    if "bimanual" in val:
+        bimanual = True
+        val = val.replace("_bimanual", "").replace("-bimanual", "").replace("bimanual", "").strip("_- ")
+    elif val.startswith("bi_"):
+        bimanual = True
+        val = val[3:]
+
+    val = ROBOT_TYPE_ALIASES.get(val, val)
+    for suf in SUFFIX_STRIP:
+        if val.endswith(suf):
+            val = val[: -len(suf)]
+    val = ROBOT_TYPE_ALIASES.get(val, val)
+    return val or "unknown", bimanual
+
 
 def quality_flag(info: dict) -> str:
     fps = info.get("fps")
@@ -52,10 +99,12 @@ def analyze_one(repo_id: str) -> dict | None:
         pass
 
     info["_camera_count"] = len(camera_keys)
+    robot_type, bimanual = normalize_robot_type(info.get("robot_type"), repo_id)
 
     return {
         "id": repo_id,
-        "robot_type": info.get("robot_type") or "unknown",
+        "robot_type": robot_type,
+        "bimanual": bimanual,
         "fps": info.get("fps"),
         "episodes": info.get("total_episodes", 0),
         "frames": info.get("total_frames", 0),

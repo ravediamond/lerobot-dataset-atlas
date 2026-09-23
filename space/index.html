@@ -256,7 +256,7 @@ function camIcons(n){
 
 const state = {
   query: "", robots: new Set(), cats: new Set(), cams: new Set(), episodeBand: null, quality: new Set(),
-  sort: "episodes_desc",
+  bimanualOnly: false, sort: "episodes_desc",
 };
 let DATASETS = [];
 let CATS = [];
@@ -297,6 +297,7 @@ function renderRail(){
   const camCounts = countBy(d => d.cameras >= 3 ? "3+" : String(d.cameras));
   const qualityCounts = countBy(d => d.q.key);
   const robots = Object.keys(robotCounts).sort((a,b) => robotCounts[b] - robotCounts[a]);
+  const bimanualCount = DATASETS.filter(d => d.bimanual).length;
 
   document.getElementById("rail").innerHTML = `
     <div>
@@ -326,6 +327,10 @@ function renderRail(){
       <div class="btn-group">${EPISODE_BANDS.map(b => `<button data-facet="episodeBand" value="${b.key}" class="${state.episodeBand===b.key?'on':''}">${b.label}</button>`).join("")}</div>
     </div>
     <div>
+      <p class="facet-title">Arms</p>
+      <div class="btn-group"><button data-facet="bimanual" class="${state.bimanualOnly?'on':''}">bimanual only <span class="mono" style="opacity:.6">(${bimanualCount})</span></button></div>
+    </div>
+    <div>
       <p class="facet-title">Quality</p>
       <div class="facet-list">${QUALITY.map(q => `
         <label class="facet-row"><input type="checkbox" data-facet="quality" value="${q.key}" ${state.quality.has(q.key)?'checked':''}>
@@ -345,8 +350,11 @@ function renderRail(){
     state.episodeBand = state.episodeBand === el.value ? null : el.value;
     refresh();
   });
+  const bimanualBtn = document.querySelector('[data-facet="bimanual"]');
+  if (bimanualBtn) bimanualBtn.onclick = () => { state.bimanualOnly = !state.bimanualOnly; refresh(); };
   document.getElementById("clearAll").onclick = () => {
-    state.robots.clear(); state.cats.clear(); state.cams.clear(); state.quality.clear(); state.episodeBand = null; state.query = "";
+    state.robots.clear(); state.cats.clear(); state.cams.clear(); state.quality.clear();
+    state.episodeBand = null; state.bimanualOnly = false; state.query = "";
     document.getElementById("search").value = "";
     refresh();
   };
@@ -360,6 +368,7 @@ function renderPills(){
   state.cams.forEach(v => pills.push({ label: `${v} cam${v==='1'?'':'s'}`, clear: () => state.cams.delete(v) }));
   state.quality.forEach(v => pills.push({ label: QUALITY.find(q=>q.key===v).label, clear: () => state.quality.delete(v) }));
   if (state.episodeBand) { const b = EPISODE_BANDS.find(x=>x.key===state.episodeBand); pills.push({ label: `${b.label} episodes`, clear: () => state.episodeBand = null }); }
+  if (state.bimanualOnly) pills.push({ label: "bimanual only", clear: () => state.bimanualOnly = false });
   const host = document.getElementById("activePills");
   host.innerHTML = pills.map((p,i) => `<span class="pill">${p.label}<button data-i="${i}">✕</button></span>`).join("");
   host.querySelectorAll("button").forEach((btn,i) => btn.onclick = () => { pills[i].clear(); refresh(); });
@@ -372,6 +381,7 @@ function filteredSorted(){
       if (!(d.name.toLowerCase().includes(q) || d.robotType.toLowerCase().includes(q) || (d.taskString||"").toLowerCase().includes(q) || d.cat.label.toLowerCase().includes(q))) return false;
     }
     if (state.robots.size && !state.robots.has(d.robotType)) return false;
+    if (state.bimanualOnly && !d.bimanual) return false;
     if (state.cats.size && !state.cats.has(d.cat.key)) return false;
     if (state.cams.size) {
       const camKey = d.cameras >= 3 ? "3+" : String(d.cameras);
@@ -400,7 +410,7 @@ function renderTable(){
   tbody.innerHTML = list.map(d => `
     <tr data-id="${d.id}" class="${d.id===activeId?'active':''}">
       <td class="dsname">${d.name}<a class="row-hub-link" href="${d.hubUrl}" target="_blank" rel="noopener" title="open on Hub" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4H4a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1v-2"/><path d="M9 3h4v4M13 3L7 9"/></svg></a></td>
-      <td><span class="robot-chip">${d.robotType}</span></td>
+      <td><span class="robot-chip">${d.robotType}${d.bimanual ? ' <span class="mono" style="opacity:.55">×2</span>' : ''}</span></td>
       <td><span class="cat-pill" style="background:${d.cat.color}22; color:${d.cat.color}">${d.cat.label}</span></td>
       <td class="num">${fmt(d.episodes)}</td>
       <td>${camIcons(d.cameras)} <span class="mono">${d.cameras}</span></td>
@@ -423,7 +433,7 @@ function renderPanel(){
       <div class="panel-head">
         <div>
           <h2>${d.name}</h2>
-          <div class="kind">${d.robotType} · uploaded by ${d.owner}${d.downloads ? ` · ${fmt(d.downloads)} downloads` : ""}</div>
+          <div class="kind">${d.robotType}${d.bimanual ? " (bimanual)" : ""} · uploaded by ${d.owner}${d.downloads ? ` · ${fmt(d.downloads)} downloads` : ""}</div>
         </div>
         <a class="hub-link" href="${d.hubUrl}" target="_blank" rel="noopener">open on Hub ↗</a>
         <button class="close" id="closeBtn">close ✕</button>
