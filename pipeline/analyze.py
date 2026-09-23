@@ -49,12 +49,26 @@ def infer_robot_type_from_id(repo_id: str) -> str | None:
     return None
 
 
-def normalize_robot_type(raw: str | None, repo_id: str) -> tuple[str, bool]:
-    """Returns (canonical robot type, is_bimanual). Falls back to inferring the
-    type from the dataset name when the metadata field is missing/unset."""
+def infer_robot_type_from_tags(tags: list[str] | None) -> str | None:
+    """Hub tags are usually generic taxonomy (license:, format:, ...) but a few
+    datasets carry a bare hardware-name tag (e.g. 'panda'). Cheap fallback."""
+    if not tags:
+        return None
+    tagset = {t.lower() for t in tags}
+    for kw, canon in HARDWARE_KEYWORDS:
+        if kw in tagset:
+            return canon
+    return None
+
+
+def normalize_robot_type(raw: str | None, repo_id: str, tags: list[str] | None = None) -> tuple[str, bool]:
+    """Returns (canonical robot type, is_bimanual). Falls back to the dataset's
+    Hub tags, then to inferring from the repo name, when the info.json field is
+    missing/unset."""
     val = (raw or "").strip().lower()
     if not val or val == "unknown":
-        return (infer_robot_type_from_id(repo_id) or "unknown"), False
+        inferred = infer_robot_type_from_tags(tags) or infer_robot_type_from_id(repo_id)
+        return inferred or "unknown", False
 
     bimanual = False
     if "bimanual" in val:
@@ -84,7 +98,7 @@ def quality_flag(info: dict) -> str:
     return "clean"
 
 
-def analyze_one(repo_id: str) -> dict | None:
+def analyze_one(repo_id: str, tags: list[str] | None = None) -> dict | None:
     try:
         info_path = hf_hub_download(repo_id, "meta/info.json", repo_type="dataset")
     except (EntryNotFoundError, RepositoryNotFoundError):
@@ -111,7 +125,7 @@ def analyze_one(repo_id: str) -> dict | None:
         pass
 
     info["_camera_count"] = len(camera_keys)
-    robot_type, bimanual = normalize_robot_type(info.get("robot_type"), repo_id)
+    robot_type, bimanual = normalize_robot_type(info.get("robot_type"), repo_id, tags)
 
     return {
         "id": repo_id,

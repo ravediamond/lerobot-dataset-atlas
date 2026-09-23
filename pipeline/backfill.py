@@ -50,7 +50,7 @@ def save_state(state: dict) -> None:
 def process_one(row: dict, mode: str, llm_client) -> tuple[str, dict]:
     repo_id = row["id"]
     try:
-        rec = analyze_one(repo_id)
+        rec = analyze_one(repo_id, tags=row.get("tags"))
     except Exception as e:  # noqa: BLE001 - never let one bad repo kill the crawl
         return repo_id, {"id": repo_id, "error": str(e)}
     if rec is None:

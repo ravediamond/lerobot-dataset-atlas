@@ -22,6 +22,7 @@ def discover(limit: int | None = None) -> list[dict]:
                 "downloads": getattr(ds, "downloads", None),
                 "last_modified": str(ds.last_modified) if ds.last_modified else None,
                 "private": ds.private,
+                "tags": list(ds.tags or []),
             }
         )
         if limit and len(results) >= limit:
