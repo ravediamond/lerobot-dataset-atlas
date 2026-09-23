@@ -241,8 +241,8 @@ const QUALITY = [
   { key: "broken", label: "Broken", color: "var(--critical)" },
 ];
 const EPISODE_BANDS = [
-  { key: "s", label: "< 50", test: e => e < 50 },
-  { key: "m", label: "50–300", test: e => e >= 50 && e < 300 },
+  { key: "s", label: "≤ 50", test: e => e <= 50 },
+  { key: "m", label: "51–300", test: e => e > 50 && e < 300 },
   { key: "l", label: "300–1000", test: e => e >= 300 && e < 1000 },
   { key: "xl", label: "1000+", test: e => e >= 1000 },
 ];
