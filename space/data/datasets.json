@@ -474,7 +474,7 @@
       "id": "lerobot/pusht",
       "name": "pusht",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1072,7 +1072,7 @@
       "id": "lerobot/pusht_image",
       "name": "pusht_image",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1358,7 +1358,7 @@
       "id": "lerobot/pusht_keypoints",
       "name": "pusht_keypoints",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1384,7 +1384,7 @@
       "id": "aractingi/pusht",
       "name": "pusht",
       "owner": "aractingi",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1436,7 +1436,7 @@
       "id": "lerobot/utokyo_pr2_opening_fridge",
       "name": "utokyo_pr2_opening_fridge",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pr2",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1514,7 +1514,7 @@
       "id": "lerobot/utokyo_pr2_tabletop_manipulation",
       "name": "utokyo_pr2_tabletop_manipulation",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pr2",
       "bimanual": false,
       "cat": {
         "key": "manipulation",
@@ -1592,7 +1592,7 @@
       "id": "lerobot/dlr_sara_grid_clamp",
       "name": "dlr_sara_grid_clamp",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "sara",
       "bimanual": false,
       "cat": {
         "key": "manipulation",
@@ -1618,7 +1618,7 @@
       "id": "lerobot/dlr_sara_pour",
       "name": "dlr_sara_pour",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "sara",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1644,7 +1644,7 @@
       "id": "lerobot/dlr_edan_shared_control",
       "name": "dlr_edan_shared_control",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "edan",
       "bimanual": false,
       "cat": {
         "key": "assembly",
@@ -1722,7 +1722,7 @@
       "id": "lerobot/imperialcollege_sawyer_wrist_cam",
       "name": "imperialcollege_sawyer_wrist_cam",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "sawyer",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1826,7 +1826,7 @@
       "id": "lerobot/columbia_cairlab_pusht_real",
       "name": "columbia_cairlab_pusht_real",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1878,7 +1878,7 @@
       "id": "lerobot/conq_hose_manipulation",
       "name": "conq_hose_manipulation",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "spot",
       "bimanual": false,
       "cat": {
         "key": "manipulation",
@@ -1904,7 +1904,7 @@
       "id": "lerobot/berkeley_gnm_sac_son",
       "name": "berkeley_gnm_sac_son",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "gnm",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -1956,7 +1956,7 @@
       "id": "lerobot/berkeley_fanuc_manipulation",
       "name": "berkeley_fanuc_manipulation",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "fanuc",
       "bimanual": false,
       "cat": {
         "key": "manipulation",
@@ -1982,7 +1982,7 @@
       "id": "lerobot/jaco_play",
       "name": "jaco_play",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "jaco",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -2060,7 +2060,7 @@
       "id": "lerobot/berkeley_gnm_recon",
       "name": "berkeley_gnm_recon",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "gnm",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -2450,7 +2450,7 @@
       "id": "lerobot/droid_100",
       "name": "droid_100",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "franka",
       "bimanual": false,
       "cat": {
         "key": "assembly",
@@ -2528,7 +2528,7 @@
       "id": "lerobot/stanford_kuka_multimodal_dataset",
       "name": "stanford_kuka_multimodal_dataset",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "kuka",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -2580,7 +2580,7 @@
       "id": "lerobot/berkeley_gnm_cory_hall",
       "name": "berkeley_gnm_cory_hall",
       "owner": "lerobot",
-      "robotType": "unknown",
+      "robotType": "gnm",
       "bimanual": false,
       "cat": {
         "key": "assembly",
@@ -2762,7 +2762,7 @@
       "id": "aliberts/pusht",
       "name": "pusht",
       "owner": "aliberts",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "assembly",
@@ -2788,7 +2788,7 @@
       "id": "aliberts/pusht_image",
       "name": "pusht_image",
       "owner": "aliberts",
-      "robotType": "unknown",
+      "robotType": "pusht",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -2814,7 +2814,7 @@
       "id": "aliberts/stanford_kuka_multimodal_dataset",
       "name": "stanford_kuka_multimodal_dataset",
       "owner": "aliberts",
-      "robotType": "unknown",
+      "robotType": "kuka",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -3256,7 +3256,7 @@
       "id": "dudulrx0601/roarm_m3_test",
       "name": "roarm_m3_test",
       "owner": "dudulrx0601",
-      "robotType": "unknown",
+      "robotType": "roarm",
       "bimanual": false,
       "cat": {
         "key": "pick_place",
@@ -6012,7 +6012,7 @@
       "id": "aractingi/droid_100",
       "name": "droid_100",
       "owner": "aractingi",
-      "robotType": "unknown",
+      "robotType": "franka",
       "bimanual": false,
       "cat": {
         "key": "assembly",

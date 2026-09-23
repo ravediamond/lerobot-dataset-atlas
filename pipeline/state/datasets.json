@@ -31867,7 +31867,7 @@
   },
   "lerobot/pusht": {
     "id": "lerobot/pusht",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 25650,
@@ -32389,7 +32389,7 @@
   },
   "lerobot/pusht_image": {
     "id": "lerobot/pusht_image",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 25650,
@@ -32638,7 +32638,7 @@
   },
   "lerobot/pusht_keypoints": {
     "id": "lerobot/pusht_keypoints",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 25650,
@@ -32656,7 +32656,7 @@
   },
   "aractingi/pusht": {
     "id": "aractingi/pusht",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 25650,
@@ -32701,7 +32701,7 @@
   },
   "lerobot/utokyo_pr2_opening_fridge": {
     "id": "lerobot/utokyo_pr2_opening_fridge",
-    "robot_type": "unknown",
+    "robot_type": "pr2",
     "fps": 5,
     "episodes": 80,
     "frames": 11522,
@@ -32761,7 +32761,7 @@
   },
   "lerobot/utokyo_pr2_tabletop_manipulation": {
     "id": "lerobot/utokyo_pr2_tabletop_manipulation",
-    "robot_type": "unknown",
+    "robot_type": "pr2",
     "fps": 5,
     "episodes": 240,
     "frames": 32708,
@@ -32822,7 +32822,7 @@
   },
   "lerobot/dlr_sara_grid_clamp": {
     "id": "lerobot/dlr_sara_grid_clamp",
-    "robot_type": "unknown",
+    "robot_type": "sara",
     "fps": 5,
     "episodes": 107,
     "frames": 7622,
@@ -32842,7 +32842,7 @@
   },
   "lerobot/dlr_sara_pour": {
     "id": "lerobot/dlr_sara_pour",
-    "robot_type": "unknown",
+    "robot_type": "sara",
     "fps": 5,
     "episodes": 100,
     "frames": 12971,
@@ -32862,7 +32862,7 @@
   },
   "lerobot/dlr_edan_shared_control": {
     "id": "lerobot/dlr_edan_shared_control",
-    "robot_type": "unknown",
+    "robot_type": "edan",
     "fps": 5,
     "episodes": 104,
     "frames": 8928,
@@ -32928,7 +32928,7 @@
   },
   "lerobot/imperialcollege_sawyer_wrist_cam": {
     "id": "lerobot/imperialcollege_sawyer_wrist_cam",
-    "robot_type": "unknown",
+    "robot_type": "sawyer",
     "fps": 5,
     "episodes": 170,
     "frames": 7148,
@@ -33012,7 +33012,7 @@
   },
   "lerobot/columbia_cairlab_pusht_real": {
     "id": "lerobot/columbia_cairlab_pusht_real",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 136,
     "frames": 27808,
@@ -33056,7 +33056,7 @@
   },
   "lerobot/conq_hose_manipulation": {
     "id": "lerobot/conq_hose_manipulation",
-    "robot_type": "unknown",
+    "robot_type": "spot",
     "fps": 30,
     "episodes": 139,
     "frames": 8277,
@@ -33078,7 +33078,7 @@
   },
   "lerobot/berkeley_gnm_sac_son": {
     "id": "lerobot/berkeley_gnm_sac_son",
-    "robot_type": "unknown",
+    "robot_type": "gnm",
     "fps": 10,
     "episodes": 2955,
     "frames": 241059,
@@ -33118,7 +33118,7 @@
   },
   "lerobot/berkeley_fanuc_manipulation": {
     "id": "lerobot/berkeley_fanuc_manipulation",
-    "robot_type": "unknown",
+    "robot_type": "fanuc",
     "fps": 10,
     "episodes": 415,
     "frames": 62613,
@@ -33139,7 +33139,7 @@
   },
   "lerobot/jaco_play": {
     "id": "lerobot/jaco_play",
-    "robot_type": "unknown",
+    "robot_type": "jaco",
     "fps": 10,
     "episodes": 1085,
     "frames": 77965,
@@ -33201,7 +33201,7 @@
   },
   "lerobot/berkeley_gnm_recon": {
     "id": "lerobot/berkeley_gnm_recon",
-    "robot_type": "unknown",
+    "robot_type": "gnm",
     "fps": 3,
     "episodes": 11834,
     "frames": 610907,
@@ -33516,7 +33516,7 @@
   },
   "lerobot/droid_100": {
     "id": "lerobot/droid_100",
-    "robot_type": "unknown",
+    "robot_type": "franka",
     "fps": 15,
     "episodes": 100,
     "frames": 32212,
@@ -33586,7 +33586,7 @@
   },
   "lerobot/stanford_kuka_multimodal_dataset": {
     "id": "lerobot/stanford_kuka_multimodal_dataset",
-    "robot_type": "unknown",
+    "robot_type": "kuka",
     "fps": 20,
     "episodes": 3000,
     "frames": 149985,
@@ -33627,7 +33627,7 @@
   },
   "lerobot/berkeley_gnm_cory_hall": {
     "id": "lerobot/berkeley_gnm_cory_hall",
-    "robot_type": "unknown",
+    "robot_type": "gnm",
     "fps": 5,
     "episodes": 7331,
     "frames": 156012,
@@ -35453,7 +35453,7 @@
   },
   "aliberts/pusht": {
     "id": "aliberts/pusht",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 0,
@@ -35567,7 +35567,7 @@
   },
   "aliberts/pusht_image": {
     "id": "aliberts/pusht_image",
-    "robot_type": "unknown",
+    "robot_type": "pusht",
     "fps": 10,
     "episodes": 206,
     "frames": 0,
@@ -35605,7 +35605,7 @@
   },
   "aliberts/stanford_kuka_multimodal_dataset": {
     "id": "aliberts/stanford_kuka_multimodal_dataset",
-    "robot_type": "unknown",
+    "robot_type": "kuka",
     "fps": 20,
     "episodes": 3000,
     "frames": 149985,
@@ -36748,7 +36748,7 @@
   },
   "dudulrx0601/roarm_m3_test": {
     "id": "dudulrx0601/roarm_m3_test",
-    "robot_type": "unknown",
+    "robot_type": "roarm",
     "fps": 30,
     "episodes": 50,
     "frames": 4739,
@@ -41320,7 +41320,7 @@
   },
   "aractingi/droid_100": {
     "id": "aractingi/droid_100",
-    "robot_type": "unknown",
+    "robot_type": "franka",
     "fps": 15,
     "episodes": 100,
     "frames": 32212,

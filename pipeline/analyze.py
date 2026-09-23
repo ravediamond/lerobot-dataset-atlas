@@ -25,6 +25,12 @@ HARDWARE_KEYWORDS = [
     ("ur5", "ur5"), ("ur10", "ur10"), ("panda", "panda"), ("franka", "franka"),
     ("stretch", "stretch"), ("piper", "piper"), ("moss", "moss"), ("arx5", "arx5"),
     ("reachy", "reachy"), ("mycobot", "mycobot"), ("myarm", "myarm"), ("lekiwi", "lekiwi"),
+    # academic / OpenX-style converted datasets — robot named in the repo slug
+    ("kuka", "kuka"), ("fanuc", "fanuc"), ("utokyo_pr2", "pr2"), ("_pr2_", "pr2"),
+    ("sawyer", "sawyer"), ("jaco", "jaco"), ("edan", "edan"), ("dlr_sara", "sara"),
+    ("berkeley_gnm", "gnm"), ("baxter", "baxter"), ("locobot", "locobot"),
+    ("hsr_", "hsr"), ("tiago", "tiago"), ("roarm", "roarm"), ("spot", "spot"),
+    ("conq", "spot"), ("pusht", "pusht"), ("droid", "franka"),
 ]
 
 # messy raw values seen in the wild -> canonical name
