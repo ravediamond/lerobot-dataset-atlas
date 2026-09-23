@@ -55,7 +55,7 @@ def main():
     args = parser.parse_args()
 
     state = json.loads(args.inp.read_text())
-    records = [r for r in state.values() if "error" not in r]
+    records = [r for r in state.values() if "error" not in r and "excluded" not in r]
     rows = [to_row(r) for r in records]
 
     args.out.parent.mkdir(parents=True, exist_ok=True)

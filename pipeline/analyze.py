@@ -16,6 +16,7 @@ from huggingface_hub.utils import EntryNotFoundError, RepositoryNotFoundError
 from tqdm import tqdm
 
 VALID_FPS = {5, 10, 15, 20, 24, 25, 30, 50, 60}
+MIN_EPISODES = 50
 
 # ordered by specificity — first match wins
 HARDWARE_KEYWORDS = [
@@ -83,6 +84,11 @@ def analyze_one(repo_id: str) -> dict | None:
     except (EntryNotFoundError, RepositoryNotFoundError):
         return None
     info = json.loads(Path(info_path).read_text())
+
+    episodes = info.get("total_episodes", 0)
+    if episodes < MIN_EPISODES:
+        # skip the tasks.jsonl fetch and LLM classify call — too small to be useful
+        return {"id": repo_id, "excluded": f"episodes<{MIN_EPISODES}", "episodes": episodes}
 
     features = info.get("features", {})
     camera_keys = [k for k, v in features.items() if v.get("dtype") in ("video", "image")]

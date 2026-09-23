@@ -55,6 +55,8 @@ def process_one(row: dict, mode: str, llm_client) -> tuple[str, dict]:
         return repo_id, {"id": repo_id, "error": str(e)}
     if rec is None:
         return repo_id, {"id": repo_id, "error": "no meta/info.json"}
+    if "excluded" in rec:
+        return repo_id, rec
 
     rec["downloads"] = row.get("downloads")
     rec["last_modified"] = row.get("last_modified")
