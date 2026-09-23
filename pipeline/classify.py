@@ -103,7 +103,7 @@ def classify_llm(records: list[dict], max_workers: int = 8) -> dict[str, str]:
     return out
 
 
-GEMINI_MODEL = "gemini-3.5-flash-lite"
+GEMINI_MODEL = "gemini-3.1-flash-lite"
 
 
 def classify_gemini_single(client, record: dict) -> tuple[str, str]:
