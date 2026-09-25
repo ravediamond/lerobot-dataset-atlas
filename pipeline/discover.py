@@ -23,6 +23,7 @@ def discover(limit: int | None = None) -> list[dict]:
                 "last_modified": str(ds.last_modified) if ds.last_modified else None,
                 "private": ds.private,
                 "tags": list(ds.tags or []),
+                "license": (ds.card_data or {}).get("license") if getattr(ds, "card_data", None) else None,
             }
         )
         if limit and len(results) >= limit:

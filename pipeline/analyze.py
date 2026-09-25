@@ -1,6 +1,8 @@
-"""Pull meta/info.json (+ tasks, when present) for each discovered dataset and
-compute the code-analysis metrics: fps, episodes, camera count, action/state
-dims, robot type, quality flag. No LLM calls here.
+"""Pull meta/info.json + meta/stats.json (+ tasks, when present) for each
+discovered dataset and compute code-analysis metrics: fps, episodes, camera
+count, action/state dims, robot type, embodiment, and a 4-tier quality grade
+(clean/warning/degraded/broken) from deterministic Tier-0 checks in quality.py.
+No LLM calls, no video download.
 
 Usage: python analyze.py --in out/discovered.json [--out out/analyzed.json]
 """
@@ -15,7 +17,8 @@ from huggingface_hub import hf_hub_download
 from huggingface_hub.utils import EntryNotFoundError, RepositoryNotFoundError
 from tqdm import tqdm
 
-VALID_FPS = {5, 10, 15, 20, 24, 25, 30, 50, 60}
+from quality import camera_role, classify_embodiment, compute_quality, task_string_quality
+
 MIN_EPISODES = 50
 
 # ordered by specificity — first match wins
@@ -86,34 +89,29 @@ def normalize_robot_type(raw: str | None, repo_id: str, tags: list[str] | None =
     return val or "unknown", bimanual
 
 
-def quality_flag(info: dict) -> str:
-    fps = info.get("fps")
-    episodes = info.get("total_episodes", 0)
-    n_cams = info.get("_camera_count", 0)
-
-    if not fps or episodes == 0 or n_cams == 0:
-        return "broken"
-    if fps not in VALID_FPS or episodes < 5:
-        return "minor"
-    return "clean"
+def _download_json(repo_id: str, path: str) -> dict | None:
+    try:
+        p = hf_hub_download(repo_id, path, repo_type="dataset")
+    except (EntryNotFoundError, RepositoryNotFoundError):
+        return None
+    return json.loads(Path(p).read_text())
 
 
 def analyze_one(repo_id: str, tags: list[str] | None = None) -> dict | None:
-    try:
-        info_path = hf_hub_download(repo_id, "meta/info.json", repo_type="dataset")
-    except (EntryNotFoundError, RepositoryNotFoundError):
+    info = _download_json(repo_id, "meta/info.json")
+    if info is None:
         return None
-    info = json.loads(Path(info_path).read_text())
 
     episodes = info.get("total_episodes", 0)
     if episodes < MIN_EPISODES:
-        # skip the tasks.jsonl fetch and LLM classify call — too small to be useful
+        # skip stats.json, tasks, and the LLM classify call — too small to be useful
         return {"id": repo_id, "excluded": f"episodes<{MIN_EPISODES}", "episodes": episodes}
 
     features = info.get("features", {})
     camera_keys = [k for k, v in features.items() if v.get("dtype") in ("video", "image")]
     action = features.get("action", {})
     state = features.get("observation.state", {})
+    action_dim = (action.get("shape") or [None])[0]
 
     task_strings: list[str] = []
     try:
@@ -124,22 +122,43 @@ def analyze_one(repo_id: str, tags: list[str] | None = None) -> dict | None:
     except (EntryNotFoundError, RepositoryNotFoundError):
         pass
 
-    info["_camera_count"] = len(camera_keys)
+    stats = _download_json(repo_id, "meta/stats.json") or {}
+    action_stats = stats.get("action") or {}
+
     robot_type, bimanual = normalize_robot_type(info.get("robot_type"), repo_id, tags)
+    cameras_roles = {k: camera_role(k) for k in camera_keys}
+    embodiment = classify_embodiment(action_dim, robot_type, bimanual)
+    tstr_quality = task_string_quality(task_strings)
+    q = compute_quality(
+        fps=info.get("fps"),
+        episodes=episodes,
+        cameras=len(camera_keys),
+        camera_keys=camera_keys,
+        stats=stats,
+        features=features,
+        action_stats=action_stats,
+        total_frames=info.get("total_frames", 0),
+    )
 
     return {
         "id": repo_id,
         "robot_type": robot_type,
         "bimanual": bimanual,
+        "embodiment": embodiment,
         "fps": info.get("fps"),
-        "episodes": info.get("total_episodes", 0),
+        "episodes": episodes,
         "frames": info.get("total_frames", 0),
         "cameras": len(camera_keys),
         "camera_keys": camera_keys,
-        "action_dim": (action.get("shape") or [None])[0],
+        "camera_roles": cameras_roles,
+        "action_dim": action_dim,
         "state_dim": (state.get("shape") or [None])[0],
+        "action_units": q["action_units"],
         "task_strings": task_strings,
-        "quality": quality_flag(info),
+        "task_string_quality": tstr_quality,
+        "quality": q["grade"],  # kept for backward compat with old 3-tier consumers
+        "quality_grade": q["grade"],
+        "quality_flags": q["flags"],
         "codebase_version": info.get("codebase_version"),
     }
 
@@ -155,7 +174,7 @@ def main():
     skipped = []
     for row in tqdm(discovered, desc="analyzing"):
         try:
-            analyzed = analyze_one(row["id"])
+            analyzed = analyze_one(row["id"], tags=row.get("tags"))
         except Exception as e:  # noqa: BLE001 - keep the pipeline moving on a bad repo
             skipped.append({"id": row["id"], "error": str(e)})
             continue

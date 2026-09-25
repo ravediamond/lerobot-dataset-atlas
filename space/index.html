@@ -28,6 +28,7 @@
 
     --good: #0ca30c;
     --warning: #fab219;
+    --serious: #ec835a;
     --critical: #e66767;
   }
 
@@ -237,8 +238,15 @@
 <script>
 const QUALITY = [
   { key: "clean", label: "Clean", color: "var(--good)" },
-  { key: "minor", label: "Minor flags", color: "var(--warning)" },
+  { key: "warning", label: "Warning", color: "var(--warning)" },
+  { key: "degraded", label: "Degraded", color: "var(--serious)" },
   { key: "broken", label: "Broken", color: "var(--critical)" },
+];
+const HARDWARE_TYPES = [
+  { key: "single_arm", label: "Single arm" },
+  { key: "dual_arm", label: "Dual arm" },
+  { key: "mobile_manipulator", label: "Mobile manipulator" },
+  { key: "humanoid", label: "Humanoid" },
 ];
 const EPISODE_BANDS = [
   { key: "s", label: "≤ 50", test: e => e <= 50 },
@@ -256,7 +264,7 @@ function camIcons(n){
 
 const state = {
   query: "", robots: new Set(), cats: new Set(), cams: new Set(), episodeBand: null, quality: new Set(),
-  bimanualOnly: false, sort: "episodes_desc",
+  bimanualOnly: false, hardwareTypes: new Set(), hideDuplicates: true, sort: "episodes_desc",
 };
 let DATASETS = [];
 let CATS = [];
@@ -298,6 +306,8 @@ function renderRail(){
   const qualityCounts = countBy(d => d.q.key);
   const robots = Object.keys(robotCounts).sort((a,b) => robotCounts[b] - robotCounts[a]);
   const bimanualCount = DATASETS.filter(d => d.bimanual).length;
+  const hwCounts = countBy(d => d.hardwareType || "single_arm");
+  const dupCount = DATASETS.filter(d => d.isDuplicateOf).length;
 
   document.getElementById("rail").innerHTML = `
     <div>
@@ -327,6 +337,15 @@ function renderRail(){
       <div class="btn-group">${EPISODE_BANDS.map(b => `<button data-facet="episodeBand" value="${b.key}" class="${state.episodeBand===b.key?'on':''}">${b.label}</button>`).join("")}</div>
     </div>
     <div>
+      <p class="facet-title">Embodiment</p>
+      <div class="facet-list">${HARDWARE_TYPES.map(h => `
+        <label class="facet-row"><input type="checkbox" data-facet="hardwareTypes" value="${h.key}" ${state.hardwareTypes.has(h.key)?'checked':''}>
+          ${h.label}
+          <span class="n">${hwCounts[h.key]||0}</span>
+        </label>`).join("")}
+      </div>
+    </div>
+    <div>
       <p class="facet-title">Arms</p>
       <div class="btn-group"><button data-facet="bimanual" class="${state.bimanualOnly?'on':''}">bimanual only <span class="mono" style="opacity:.6">(${bimanualCount})</span></button></div>
     </div>
@@ -339,12 +358,17 @@ function renderRail(){
         </label>`).join("")}
       </div>
     </div>
+    <div>
+      <p class="facet-title">Duplicates</p>
+      <div class="btn-group"><button data-facet="hideDuplicates" class="${state.hideDuplicates?'on':''}">hide known duplicates <span class="mono" style="opacity:.6">(${dupCount})</span></button></div>
+    </div>
     <button class="clear-all" id="clearAll">clear all filters</button>
   `;
 
   document.querySelectorAll('[data-facet="robots"]').forEach(el => el.onchange = () => toggle(state.robots, el.value));
   document.querySelectorAll('[data-facet="cats"]').forEach(el => el.onchange = () => toggle(state.cats, el.value));
   document.querySelectorAll('[data-facet="quality"]').forEach(el => el.onchange = () => toggle(state.quality, el.value));
+  document.querySelectorAll('[data-facet="hardwareTypes"]').forEach(el => el.onchange = () => toggle(state.hardwareTypes, el.value));
   document.querySelectorAll('[data-facet="cams"]').forEach(el => el.onclick = () => toggle(state.cams, el.value));
   document.querySelectorAll('[data-facet="episodeBand"]').forEach(el => el.onclick = () => {
     state.episodeBand = state.episodeBand === el.value ? null : el.value;
@@ -352,9 +376,11 @@ function renderRail(){
   });
   const bimanualBtn = document.querySelector('[data-facet="bimanual"]');
   if (bimanualBtn) bimanualBtn.onclick = () => { state.bimanualOnly = !state.bimanualOnly; refresh(); };
+  const hideDupBtn = document.querySelector('[data-facet="hideDuplicates"]');
+  if (hideDupBtn) hideDupBtn.onclick = () => { state.hideDuplicates = !state.hideDuplicates; refresh(); };
   document.getElementById("clearAll").onclick = () => {
-    state.robots.clear(); state.cats.clear(); state.cams.clear(); state.quality.clear();
-    state.episodeBand = null; state.bimanualOnly = false; state.query = "";
+    state.robots.clear(); state.cats.clear(); state.cams.clear(); state.quality.clear(); state.hardwareTypes.clear();
+    state.episodeBand = null; state.bimanualOnly = false; state.hideDuplicates = true; state.query = "";
     document.getElementById("search").value = "";
     refresh();
   };
@@ -369,6 +395,7 @@ function renderPills(){
   state.quality.forEach(v => pills.push({ label: QUALITY.find(q=>q.key===v).label, clear: () => state.quality.delete(v) }));
   if (state.episodeBand) { const b = EPISODE_BANDS.find(x=>x.key===state.episodeBand); pills.push({ label: `${b.label} episodes`, clear: () => state.episodeBand = null }); }
   if (state.bimanualOnly) pills.push({ label: "bimanual only", clear: () => state.bimanualOnly = false });
+  state.hardwareTypes.forEach(v => pills.push({ label: HARDWARE_TYPES.find(h=>h.key===v).label, clear: () => state.hardwareTypes.delete(v) }));
   const host = document.getElementById("activePills");
   host.innerHTML = pills.map((p,i) => `<span class="pill">${p.label}<button data-i="${i}">✕</button></span>`).join("");
   host.querySelectorAll("button").forEach((btn,i) => btn.onclick = () => { pills[i].clear(); refresh(); });
@@ -389,6 +416,8 @@ function filteredSorted(){
     }
     if (state.episodeBand) { const b = EPISODE_BANDS.find(x=>x.key===state.episodeBand); if (!b.test(d.episodes)) return false; }
     if (state.quality.size && !state.quality.has(d.q.key)) return false;
+    if (state.hardwareTypes.size && !state.hardwareTypes.has(d.hardwareType || "single_arm")) return false;
+    if (state.hideDuplicates && d.isDuplicateOf) return false;
     return true;
   });
   const sorters = {
@@ -438,6 +467,7 @@ function renderPanel(){
         <a class="hub-link" href="${d.hubUrl}" target="_blank" rel="noopener">open on Hub ↗</a>
         <button class="close" id="closeBtn">close ✕</button>
       </div>
+      ${d.isDuplicateOf ? `<p class="task-quote" style="border-color:var(--critical); color:var(--critical);">Likely duplicate of <a href="https://huggingface.co/datasets/${d.isDuplicateOf}" target="_blank" rel="noopener" style="color:inherit;">${d.isDuplicateOf}</a> (identical video content, matched via Hub LFS hash)</p>` : ""}
       ${d.taskString ? `<p class="task-quote">"${d.taskString}"</p>` : `<p class="task-quote" style="opacity:.6;">no task description in this dataset's metadata</p>`}
       <div class="meta-grid">
         <div class="stat"><div class="n mono">${fmt(d.episodes)}</div><div class="l">episodes</div></div>
@@ -445,11 +475,22 @@ function renderPanel(){
         <div class="stat"><div class="n mono">${d.fps ?? "—"}</div><div class="l">fps</div></div>
         <div class="stat"><div class="n mono">${d.actionDim ?? "—"}</div><div class="l">action dims</div></div>
         <div class="stat"><div class="n mono" style="color:${d.cat.color}">${d.cat.label}</div><div class="l">task category</div></div>
-        <div class="stat"><div class="n mono" style="color:${d.q.color}">${d.q.label}</div><div class="l">quality flag</div></div>
+        <div class="stat"><div class="n mono" style="color:${d.q.color}">${d.q.label}</div><div class="l">quality grade</div></div>
       </div>
+      <div class="meta-grid">
+        <div class="stat"><div class="n mono">${(HARDWARE_TYPES.find(h=>h.key===d.hardwareType)||{}).label || "—"}</div><div class="l">embodiment</div></div>
+        <div class="stat"><div class="n mono">${d.actionUnits || "—"}</div><div class="l">action units</div></div>
+        <div class="stat"><div class="n mono">${Object.values(d.cameraRoles||{}).filter(r=>r==='wrist').length}</div><div class="l">wrist cams</div></div>
+        <div class="stat"><div class="n mono">${Object.values(d.cameraRoles||{}).filter(r=>r==='exterior').length}</div><div class="l">exterior cams</div></div>
+      </div>
+      ${d.qualityFlags && d.qualityFlags.length ? `
+      <p class="chart-title">Quality flags</p>
+      <div class="related" style="margin-bottom:22px;">
+        ${d.qualityFlags.map(f => `<span class="related-chip" style="cursor:default;"><span class="dot" style="background:${d.q.color}"></span>${f.replace(/_/g,' ')}</span>`).join("")}
+      </div>` : ""}
       <p class="chart-title">Why it matched your filters</p>
       <p style="font-size:13px; color:var(--ink-secondary); margin:0;">
-        ${d.robotType} platform, ${d.cameras}-camera setup, ${fmt(d.episodes)} episodes${d.fps ? ` at ${d.fps}fps` : ""}, ${d.q.label.toLowerCase()} on the episode-quality scan.
+        ${d.robotType} platform, ${d.cameras}-camera setup, ${fmt(d.episodes)} episodes${d.fps ? ` at ${d.fps}fps` : ""}, ${d.q.label.toLowerCase()} on the Tier-0 metadata scan.
       </p>
     </div>`;
   document.getElementById("closeBtn").onclick = () => { activeId = null; renderTable(); renderPanel(); };

@@ -67,6 +67,7 @@ def process_one(row: dict, mode: str, client) -> tuple[str, dict]:
 
     rec["downloads"] = row.get("downloads")
     rec["last_modified"] = row.get("last_modified")
+    rec["license"] = row.get("license")
 
     if mode == "llm":
         _, cat = classify_llm_single(client, rec)

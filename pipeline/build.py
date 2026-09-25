@@ -17,34 +17,46 @@ CAT_META = {
     "navigation": {"label": "Navigation", "color": "#d55181"},
     "other": {"label": "Other / unlabeled", "color": "#9085e9"},
 }
+# 4-tier quality grade. Old records (pre-v2 migration) only have the 3-tier
+# 'quality' field (clean/minor/broken) — mapped onto the new grades below.
 QUALITY_META = {
     "clean": {"label": "Clean", "color": "var(--good)"},
-    "minor": {"label": "Minor flags", "color": "var(--warning)"},
+    "warning": {"label": "Warning", "color": "var(--warning)"},
+    "degraded": {"label": "Degraded", "color": "var(--serious)"},
     "broken": {"label": "Broken", "color": "var(--critical)"},
 }
+LEGACY_QUALITY_MAP = {"clean": "clean", "minor": "warning", "broken": "broken"}
 
 
 def to_row(r: dict) -> dict:
     cat = CAT_META[r.get("category", "other")]
-    q = QUALITY_META[r["quality"]]
+    grade = r.get("quality_grade") or LEGACY_QUALITY_MAP.get(r.get("quality"), "warning")
+    q = QUALITY_META[grade]
     owner, name = (r["id"].split("/", 1) + [r["id"]])[:2]
+    embodiment = r.get("embodiment") or {}
     return {
         "id": r["id"],
         "name": name,
         "owner": owner,
         "robotType": r.get("robot_type") or "unknown",
         "bimanual": bool(r.get("bimanual")),
+        "hardwareType": embodiment.get("hardware_type"),
         "cat": {"key": r.get("category", "other"), **cat},
         "episodes": r.get("episodes", 0),
         "cameras": r.get("cameras", 0),
+        "cameraRoles": r.get("camera_roles") or {},
         "fps": r.get("fps"),
         "actionDim": r.get("action_dim"),
         "stateDim": r.get("state_dim"),
-        "q": {"key": r["quality"], **q},
+        "actionUnits": r.get("action_units"),
+        "q": {"key": grade, **q},
+        "qualityFlags": r.get("quality_flags") or [],
         "lastUpload": (r.get("last_modified") or "")[:10],
         "taskString": (r.get("task_strings") or [""])[0],
+        "taskStringQuality": r.get("task_string_quality") or {},
         "downloads": r.get("downloads"),
         "hubUrl": f"https://huggingface.co/datasets/{r['id']}",
+        "isDuplicateOf": r.get("is_duplicate_of"),
     }
 
 
