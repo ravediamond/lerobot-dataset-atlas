@@ -131,10 +131,26 @@ def compute_quality(
     if not fps or episodes == 0 or cameras == 0:
         broken.append("missing_core_fields")
 
-    # camera key <-> stats.json sync
-    missing_stats = [k for k in camera_keys if k not in stats]
-    if missing_stats:
-        broken.append("camera_stats_missing")
+    # camera key <-> stats.json sync. Distinguish "stats.json absent entirely"
+    # (common, not fatal — dataset is still usable, just lacks precomputed
+    # normalization stats) from "stats.json exists but dropped a declared
+    # camera key" (the real migration-tool bug: guaranteed KeyError at
+    # training time when the ImageNet normalization pass runs).
+    if not stats:
+        warning.append("no_stats_file")
+    else:
+        missing_stats = [k for k in camera_keys if k not in stats]
+        if missing_stats == camera_keys:
+            # stats.json exists (has tabular/state stats) but skipped image
+            # stats for every camera entirely — common (large video corpora
+            # often skip per-pixel stats deliberately), dataset is still
+            # usable with self-computed normalization. Not fatal.
+            degraded.append("camera_stats_missing")
+        elif missing_stats:
+            # a SUBSET of declared cameras dropped from an otherwise-populated
+            # stats.json — the real migration-tool bug: guaranteed KeyError
+            # for that specific camera at training time.
+            broken.append("camera_stats_missing_partial")
 
     # null feature names on video/image features
     for k in camera_keys:
