@@ -22,7 +22,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from huggingface_hub import HfApi
 from tqdm import tqdm
 
-from backfill import load_state, save_state
+from backfill import CHECKPOINT_EVERY, load_state, save_state
 
 
 def fingerprint_one(repo_id: str) -> tuple[str, str | None, str | None]:
@@ -50,24 +50,42 @@ def fingerprint_one(repo_id: str) -> tuple[str, str | None, str | None]:
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--workers", type=int, default=20)
+    parser.add_argument("--force", action="store_true", help="re-fingerprint datasets already done")
     args = parser.parse_args()
 
     state = load_state()
-    candidates = {k: v for k, v in state.items() if "error" not in v and "excluded" not in v}
-    print(f"fingerprinting {len(candidates)} datasets")
+    candidates = {
+        k: v for k, v in state.items()
+        if "error" not in v and "excluded" not in v and (args.force or "video_lfs_hash" not in v)
+    }
+    print(f"{len(state)} total, fingerprinting {len(candidates)}")
+    if not candidates:
+        print("nothing to do")
+        return
 
     fingerprints: dict[str, tuple[str | None, str | None]] = {}
+    completed_since_checkpoint = 0
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
         futures = [pool.submit(fingerprint_one, repo_id) for repo_id in candidates]
-        for fut in tqdm(as_completed(futures), total=len(futures), desc="fingerprinting"):
+        pbar = tqdm(as_completed(futures), total=len(futures), desc="fingerprinting")
+        for fut in pbar:
             repo_id, video_hash, tabular_hash = fut.result()
             fingerprints[repo_id] = (video_hash, tabular_hash)
             state[repo_id]["video_lfs_hash"] = video_hash
             state[repo_id]["tabular_lfs_hash"] = tabular_hash
+            completed_since_checkpoint += 1
+            if completed_since_checkpoint >= CHECKPOINT_EVERY:
+                save_state(state)
+                completed_since_checkpoint = 0
+                pbar.set_postfix(saved=len(state))
+    save_state(state)  # final checkpoint before the grouping pass below
 
-    # group by video fingerprint, keep the most-downloaded as primary
+    # group by video fingerprint across the FULL state (not just this run's
+    # freshly-fingerprinted subset), so a resumed/partial run still dedups
+    # correctly against everything fingerprinted in earlier runs too
     groups: dict[str, list[str]] = {}
-    for repo_id, (video_hash, _) in fingerprints.items():
+    for repo_id, rec in state.items():
+        video_hash = rec.get("video_lfs_hash")
         if video_hash:
             groups.setdefault(video_hash, []).append(repo_id)
 
