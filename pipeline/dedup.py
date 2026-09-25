@@ -56,7 +56,10 @@ def main():
     state = load_state()
     candidates = {
         k: v for k, v in state.items()
-        if "error" not in v and "excluded" not in v and (args.force or "video_lfs_hash" not in v)
+        # retry anything never attempted OR attempted-but-failed (None from a
+        # rate-limited/errored fingerprint_one call) — only a truthy hash
+        # counts as genuinely done
+        if "error" not in v and "excluded" not in v and (args.force or not v.get("video_lfs_hash"))
     }
     print(f"{len(state)} total, fingerprinting {len(candidates)}")
     if not candidates:
