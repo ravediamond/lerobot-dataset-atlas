@@ -65,6 +65,9 @@
     font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--ink-muted);
     border: 1px solid var(--hairline-strong); border-radius: 3px; padding: 3px 8px; width: fit-content;
   }
+  .scope-note { font-size: 12.5px; color: var(--ink-muted); max-width: 68ch; line-height: 1.5; }
+  .scope-note a { color: var(--ink-secondary); }
+  .scope-note code, .thesis code { background: var(--surface-raised); border: 1px solid var(--hairline); border-radius: 3px; padding: 1px 5px; font-size: 0.92em; }
 
   .stats {
     max-width: 1320px; margin: 4px auto 0;
@@ -75,6 +78,14 @@
   .stat .n { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; font-size: 24px; font-weight: 600; }
   .stat .l { font-size: 11.5px; color: var(--ink-muted); }
   @media (max-width: 720px) { .stats { grid-template-columns: repeat(2, 1fr); } }
+
+  .quality-bar-wrap { max-width: 1320px; margin: 10px auto 0; }
+  .quality-bar-label { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 6px; font-size: 11px; color: var(--ink-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .quality-bar-legend { display: flex; gap: 14px; flex-wrap: wrap; text-transform: none; letter-spacing: 0; }
+  .quality-bar-legend span { display: inline-flex; align-items: center; gap: 5px; color: var(--ink-secondary); font-family: "IBM Plex Mono", monospace; font-size: 11px; }
+  .quality-bar-legend .fc { width: 7px; height: 7px; border-radius: 2px; }
+  .quality-bar { display: flex; height: 8px; border-radius: 4px; overflow: hidden; gap: 1px; background: var(--hairline); }
+  .quality-bar span { display: block; height: 100%; min-width: 2px; }
 
   main { max-width: 1320px; margin: 28px auto 0; display: grid; grid-template-columns: 240px 1fr; gap: 22px; align-items: start; }
   @media (max-width: 920px) { main { grid-template-columns: 1fr; } }
@@ -142,10 +153,13 @@
   table.dstable td.dsname a.row-hub-link:hover { color: var(--accent); }
   table.dstable td .robot-chip { display: flex; align-items: center; gap: 7px; }
   table.dstable td .robot-chip .dot { width: 7px; height: 7px; border-radius: 50%; }
+  table.dstable td .robot-chip .hw-icon { display: inline-flex; color: var(--ink-muted); flex: none; }
+  table.dstable td .dup-badge { font-family: "IBM Plex Mono", monospace; font-size: 9.5px; color: var(--critical); border: 1px solid var(--critical); border-radius: 3px; padding: 1px 5px; margin-left: 8px; letter-spacing: 0.04em; }
   table.dstable td.num { font-family: "IBM Plex Mono", monospace; font-variant-numeric: tabular-nums; }
   .cat-pill { font-size: 11px; padding: 2px 8px; border-radius: 10px; display: inline-block; }
   .flag { display: inline-flex; align-items: center; gap: 6px; }
   .flag .q-dot { width: 7px; height: 7px; border-radius: 50%; flex: none; }
+  .flag-count { font-family: "IBM Plex Mono", monospace; font-size: 10px; color: var(--ink-muted); background: var(--surface-raised); border-radius: 8px; padding: 0 5px; line-height: 1.5; }
   .cam-icons { display: inline-flex; gap: 2px; }
   .cam-icons svg { opacity: 0.85; }
 
@@ -185,11 +199,13 @@
 <header>
   <div class="eyebrow"><span class="dot"></span> lerobot dataset atlas</div>
   <h1>Find the right LeRobot dataset<span> — filter by hardware, cameras, episodes, task, and quality.</span></h1>
-  <p class="thesis">Every public LeRobot-format dataset on the Hub, indexed with the metadata that decides whether it fits your use case: which robot recorded it, how many cameras, how many episodes, what task, at what fps, and how clean the data actually is.</p>
-  <div class="preview-flag">◐ live pipeline — refreshed weekly from the HF Hub, currently a sample of the full LeRobot tag</div>
+  <p class="thesis">Every public dataset on the Hub tagged <code class="mono">LeRobot</code> — indexed with the metadata that decides whether it fits your use case: which robot recorded it, how many cameras, how many episodes, what task, at what fps, and how clean the data actually is.</p>
+  <div class="scope-note">Scope: datasets in the <a href="https://github.com/huggingface/lerobot" target="_blank" rel="noopener">LeRobot</a> data format specifically (has <code class="mono">meta/info.json</code>) — not general robotics/embodied-AI datasets on the Hub, even similar-looking ones without that tag.</div>
+  <div class="preview-flag">◐ live pipeline — refreshed daily from the HF Hub</div>
 </header>
 
 <div class="stats" id="globalStats"></div>
+<div class="quality-bar-wrap" id="qualityBarWrap"></div>
 
 <main>
   <aside class="rail" id="rail"></aside>
@@ -255,6 +271,13 @@ const EPISODE_BANDS = [
   { key: "xl", label: "1000+", test: e => e >= 1000 },
 ];
 
+const HW_ICONS = {
+  single_arm: `<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="3" cy="13" r="1.4"/><path d="M3 11.5V8l4-2 3 1.7 3-3.7"/><circle cx="13" cy="4" r="1.2"/></svg>`,
+  dual_arm: `<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="3" cy="3.5" r="1.1"/><path d="M3 5v3l3 2"/><circle cx="13" cy="3.5" r="1.1"/><path d="M13 5v3l-3 2"/><circle cx="8" cy="12" r="1.1"/></svg>`,
+  mobile_manipulator: `<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="8" width="10" height="4.5" rx="1"/><circle cx="4.5" cy="13.5" r="1"/><circle cx="9.5" cy="13.5" r="1"/><path d="M6 8V5l3-1.5 3 1.5v2.5"/></svg>`,
+  humanoid: `<svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="2.8" r="1.6"/><path d="M8 4.5v4.5"/><path d="M8 6l-3.5 2M8 6l3.5 2"/><path d="M8 9l-2 4.5M8 9l2 4.5"/></svg>`,
+};
+function hwIcon(key){ return `<span class="hw-icon" title="${(HARDWARE_TYPES.find(h=>h.key===key)||{}).label || 'unknown embodiment'}">${HW_ICONS[key] || HW_ICONS.single_arm}</span>`; }
 function fmt(n){ return (n ?? 0).toLocaleString("en-US"); }
 function camIcons(n){
   let s = "";
@@ -291,6 +314,18 @@ async function boot(){
     <div class="stat"><div class="n mono">${fmt(DATASETS.reduce((a,d)=>a+d.episodes,0))}</div><div class="l">episodes analyzed</div></div>
     <div class="stat"><div class="n mono">${new Set(DATASETS.map(d=>d.robotType)).size}</div><div class="l">robot types seen</div></div>
     <div class="stat"><div class="n mono">${CATS.length}</div><div class="l">task categories</div></div>
+  `;
+
+  const qCounts = {};
+  QUALITY.forEach(q => qCounts[q.key] = 0);
+  DATASETS.forEach(d => { qCounts[d.q.key] = (qCounts[d.q.key] || 0) + 1; });
+  const total = DATASETS.length || 1;
+  document.getElementById("qualityBarWrap").innerHTML = `
+    <div class="quality-bar-label">
+      <span>catalog quality</span>
+      <span class="quality-bar-legend">${QUALITY.map(q => `<span><span class="fc" style="background:${q.color}"></span>${q.label} ${Math.round(qCounts[q.key]/total*100)}%</span>`).join("")}</span>
+    </div>
+    <div class="quality-bar">${QUALITY.map(q => `<span style="flex:${qCounts[q.key]||0.0001}; background:${q.color}" title="${q.label}: ${fmt(qCounts[q.key])}"></span>`).join("")}</div>
   `;
 
   wireControls();
@@ -439,13 +474,13 @@ function renderTable(){
   tbody.innerHTML = list.map(d => `
     <tr data-id="${d.id}" class="${d.id===activeId?'active':''}">
       <td class="dsname">${d.name}<a class="row-hub-link" href="${d.hubUrl}" target="_blank" rel="noopener" title="open on Hub" onclick="event.stopPropagation()"><svg width="11" height="11" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 4H4a1 1 0 00-1 1v7a1 1 0 001 1h7a1 1 0 001-1v-2"/><path d="M9 3h4v4M13 3L7 9"/></svg></a></td>
-      <td><span class="robot-chip">${d.robotType}${d.bimanual ? ' <span class="mono" style="opacity:.55">×2</span>' : ''}</span></td>
+      <td><span class="robot-chip">${hwIcon(d.hardwareType)}${d.robotType}${d.bimanual ? ' <span class="mono" style="opacity:.55">×2</span>' : ''}</span>${d.isDuplicateOf ? '<span class="dup-badge" title="likely duplicate">dup</span>' : ''}</td>
       <td><span class="cat-pill" style="background:${d.cat.color}22; color:${d.cat.color}">${d.cat.label}</span></td>
       <td class="num">${fmt(d.episodes)}</td>
       <td>${camIcons(d.cameras)} <span class="mono">${d.cameras}</span></td>
       <td class="num">${d.fps ?? "—"}</td>
       <td class="mono">${d.lastUpload || "—"}</td>
-      <td><span class="flag"><span class="q-dot" style="background:${d.q.color}"></span>${d.q.label}</span></td>
+      <td><span class="flag"><span class="q-dot" style="background:${d.q.color}"></span>${d.q.label}${d.qualityFlags && d.qualityFlags.length ? `<span class="flag-count">${d.qualityFlags.length}</span>` : ''}</span></td>
     </tr>`).join("");
   tbody.querySelectorAll("tr").forEach(tr => tr.onclick = () => {
     activeId = activeId === tr.dataset.id ? null : tr.dataset.id;
