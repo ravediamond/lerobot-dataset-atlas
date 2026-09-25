@@ -59,14 +59,19 @@ def process_one(row: dict, mode: str, client) -> tuple[str, dict]:
     try:
         rec = analyze_one(repo_id, tags=row.get("tags"))
     except Exception as e:  # noqa: BLE001 - never let one bad repo kill the crawl
-        return repo_id, {"id": repo_id, "error": str(e)}
+        rec = {"id": repo_id, "error": str(e)}
     if rec is None:
-        return repo_id, {"id": repo_id, "error": "no meta/info.json"}
-    if "excluded" in rec:
-        return repo_id, rec
+        rec = {"id": repo_id, "error": "no meta/info.json"}
 
+    # stamp last_modified/downloads on every outcome (error/excluded included) —
+    # otherwise update.py's diff sees a missing field as "changed" forever and
+    # reprocesses every excluded/errored dataset on every single run
     rec["downloads"] = row.get("downloads")
     rec["last_modified"] = row.get("last_modified")
+
+    if "error" in rec or "excluded" in rec:
+        return repo_id, rec
+
     rec["license"] = row.get("license")
 
     if mode == "llm":
