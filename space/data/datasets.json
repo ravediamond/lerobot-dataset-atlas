@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "count": 22436,
+  "count": 22426,
   "datasets": [
     {
       "id": "EgoSteer/EgoSteer-RealWorld",
@@ -8506,92 +8506,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/mixer_on_off",
-      "name": "mixer_on_off",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-11",
-      "taskString": "switch the mixer on or off",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.61
-      },
-      "downloads": 96,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/mixer_on_off",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/orange_mixer_1",
-      "name": "orange_mixer_1",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-11",
-      "taskString": "pick orange and place in mixer",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.69
-      },
-      "downloads": 130,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/orange_mixer_1",
-      "isDuplicateOf": null
-    },
-    {
       "id": "ConnorJiang/qg_act_double_rm75_cup_scan_2",
       "name": "qg_act_double_rm75_cup_scan_2",
       "owner": "ConnorJiang",
@@ -8718,49 +8632,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/orange_pick_place_new1",
-      "name": "orange_pick_place_new1",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-13",
-      "taskString": "place orange in mixer",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.56
-      },
-      "downloads": 134,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/orange_pick_place_new1",
-      "isDuplicateOf": null
-    },
-    {
       "id": "ConnorJiang/qg_act_double_rm75_cup_disturb_2",
       "name": "qg_act_double_rm75_cup_disturb_2",
       "owner": "ConnorJiang",
@@ -8804,49 +8675,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/mixer_on_off_new",
-      "name": "mixer_on_off_new",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-13",
-      "taskString": "on off mixer",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.08
-      },
-      "downloads": 122,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/mixer_on_off_new",
-      "isDuplicateOf": null
-    },
-    {
       "id": "villekuosmanen/kitchen_interactions",
       "name": "kitchen_interactions",
       "owner": "villekuosmanen",
@@ -8887,49 +8715,6 @@
       },
       "downloads": 420,
       "hubUrl": "https://huggingface.co/datasets/villekuosmanen/kitchen_interactions",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/mixer_on_off_new_1",
-      "name": "mixer_on_off_new_1",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "assembly",
-        "label": "Assembly / insertion",
-        "color": "#c98500"
-      },
-      "episodes": 60,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-14",
-      "taskString": "on off mixer",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.08
-      },
-      "downloads": 111,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/mixer_on_off_new_1",
       "isDuplicateOf": null
     },
     {
@@ -9261,49 +9046,6 @@
       },
       "downloads": 265,
       "hubUrl": "https://huggingface.co/datasets/ConnorJiang/qg_act_rm75_to_stir",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/mixer_on_off_new_4",
-      "name": "mixer_on_off_new_4",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.laptop": "exterior",
-        "observation.images.phone": "exterior",
-        "observation.images.Lwebcam": "unknown",
-        "observation.images.macwebcam": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-01-16",
-      "taskString": "on off mixer",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.08
-      },
-      "downloads": 232,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/mixer_on_off_new_4",
       "isDuplicateOf": null
     },
     {
@@ -58606,49 +58348,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "rancheng222/so101_tie_bag",
-      "name": "so101_tie_bag",
-      "owner": "rancheng222",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "assembly",
-        "label": "Assembly / insertion",
-        "color": "#c98500"
-      },
-      "episodes": 73,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.wrist_left": "wrist",
-        "observation.images.wrist_right": "wrist",
-        "observation.images.realsense_top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 12,
-      "stateDim": 12,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_stats_file",
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-05-31",
-      "taskString": "Tie a knot in the plastic bag.",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.78
-      },
-      "downloads": 57,
-      "hubUrl": "https://huggingface.co/datasets/rancheng222/so101_tie_bag",
-      "isDuplicateOf": null
-    },
-    {
       "id": "gxy1111/so100_soft",
       "name": "so100_soft",
       "owner": "gxy1111",
@@ -69817,48 +69516,6 @@
       },
       "downloads": 190,
       "hubUrl": "https://huggingface.co/datasets/LeRobot-worldwide-hackathon/203-checkerboard-shellgame",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/picknplace_pan_to_bowl",
-      "name": "picknplace_pan_to_bowl",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.gripper": "unknown",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-10-02",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 27,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/picknplace_pan_to_bowl",
       "isDuplicateOf": null
     },
     {
@@ -95002,48 +94659,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/normal_ball_full",
-      "name": "normal_ball_full",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_stats_file",
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-07-17",
-      "taskString": "grab the ball and place it in the bowl",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.66
-      },
-      "downloads": 122,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/normal_ball_full",
-      "isDuplicateOf": null
-    },
-    {
       "id": "nik658/ur10e_pi0_17july",
       "name": "ur10e_pi0_17july",
       "owner": "nik658",
@@ -95126,48 +94741,6 @@
       "downloads": 279,
       "hubUrl": "https://huggingface.co/datasets/hariharanr1799/hebi_arm_pick_and_drop",
       "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/normal_ball_part2",
-      "name": "normal_ball_part2",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_stats_file",
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-07-17",
-      "taskString": "grab the ball and place it in the bowl",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.66
-      },
-      "downloads": 90,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/normal_ball_part2",
-      "isDuplicateOf": "satvikahuja/normal_ball_full"
     },
     {
       "id": "yongjincho/d4rl_adroit_pen_dense",
@@ -150495,47 +150068,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/cube_regular_data",
-      "name": "cube_regular_data",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "other",
-        "label": "Other / unlabeled",
-        "color": "#9085e9"
-      },
-      "episodes": 59,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "camera_stats_missing"
-      ],
-      "lastUpload": "2026-01-30",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 21,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube_regular_data",
-      "isDuplicateOf": null
-    },
-    {
       "id": "ViPter/sunglass-to-box-record",
       "name": "sunglass-to-box-record",
       "owner": "ViPter",
@@ -156434,48 +155966,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/wall_cube_FULL_p1-p3_FIXED",
-      "name": "wall_cube_FULL_p1-p3_FIXED",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 121,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.sidetop": "exterior",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-10-03",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 31,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/wall_cube_FULL_p1-p3_FIXED",
-      "isDuplicateOf": null
-    },
-    {
       "id": "aadarshram/pick_place_tape",
       "name": "pick_place_tape",
       "owner": "aadarshram",
@@ -156680,48 +156170,6 @@
       },
       "downloads": 47,
       "hubUrl": "https://huggingface.co/datasets/nbirukov/bimanual-so101-stack-yellow-ring-fast-V2",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/wall_cube_FULL_bug",
-      "name": "wall_cube_FULL_bug",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 121,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.sidetop": "exterior",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-01-30",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 25,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/wall_cube_FULL_bug",
       "isDuplicateOf": null
     },
     {
@@ -371618,48 +371066,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/cube_stack_normal_full_p12",
-      "name": "cube_stack_normal_full_p12",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior",
-        "observation.images.side": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-02-21",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 20,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube_stack_normal_full_p12",
-      "isDuplicateOf": null
-    },
-    {
       "id": "lookas/astra_press_button",
       "name": "astra_press_button",
       "owner": "lookas",
@@ -383629,86 +383035,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/cube3_actual_regular_merged_p12",
-      "name": "cube3_actual_regular_merged_p12",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-02-28",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 12,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_regular_merged_p12",
-      "isDuplicateOf": "satvikahuja/cube3_actual_full_merged_p12_xyz6"
-    },
-    {
-      "id": "satvikahuja/cube3_actual_full_merged_p12",
-      "name": "cube3_actual_full_merged_p12",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-02-28",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 18,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_full_merged_p12",
-      "isDuplicateOf": "satvikahuja/cube3_actual_full_merged_p12_xyz6"
-    },
-    {
       "id": "Shrek0/pick_10_pt2",
       "name": "pick_10_pt2",
       "owner": "Shrek0",
@@ -383745,46 +383071,6 @@
       },
       "downloads": 30,
       "hubUrl": "https://huggingface.co/datasets/Shrek0/pick_10_pt2",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/cube3_actual_full_merged_p12_xyz6",
-      "name": "cube3_actual_full_merged_p12_xyz6",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-02-28",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 20,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_full_merged_p12_xyz6",
       "isDuplicateOf": null
     },
     {
@@ -384584,46 +383870,6 @@
       "downloads": 19,
       "hubUrl": "https://huggingface.co/datasets/SongMugeon/G1_Oven_wo_tactile",
       "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/cube3_actual_full_merged_p12_dist1",
-      "name": "cube3_actual_full_merged_p12_dist1",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-03-01",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 12,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_full_merged_p12_dist1",
-      "isDuplicateOf": "satvikahuja/cube3_actual_full_merged_p12_xyz6"
     },
     {
       "id": "jellyho/aloha_box_into_pot_easy",
@@ -390940,46 +390186,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "satvikahuja/cube3_actual_full_merged_p12_xyz6_instate",
-      "name": "cube3_actual_full_merged_p12_xyz6_instate",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 12,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-03-04",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 13,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_full_merged_p12_xyz6_instate",
-      "isDuplicateOf": "satvikahuja/cube3_actual_full_merged_p12_xyz6"
-    },
-    {
       "id": "Tsagkas/dataset_deltas_lvfm_v1",
       "name": "dataset_deltas_lvfm_v1",
       "owner": "Tsagkas",
@@ -391019,46 +390225,6 @@
       "downloads": 15,
       "hubUrl": "https://huggingface.co/datasets/Tsagkas/dataset_deltas_lvfm_v1",
       "isDuplicateOf": null
-    },
-    {
-      "id": "satvikahuja/cube3_actual_full_merged_p12_dist1_instate",
-      "name": "cube3_actual_full_merged_p12_dist1_instate",
-      "owner": "satvikahuja",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.side": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 7,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-03-04",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 17,
-      "hubUrl": "https://huggingface.co/datasets/satvikahuja/cube3_actual_full_merged_p12_dist1_instate",
-      "isDuplicateOf": "satvikahuja/cube3_actual_full_merged_p12_xyz6"
     },
     {
       "id": "kb127/newdata",
@@ -850791,48 +849957,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "R1-HSP/R1_passage_merged",
-      "name": "R1_passage_merged",
-      "owner": "R1-HSP",
-      "robotType": "r1",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.stereo_left": "unknown",
-        "observation.images.stereo_right": "unknown"
-      },
-      "fps": 10,
-      "actionDim": 24,
-      "stateDim": 24,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels",
-        "uncalibrated_or_unknown_units"
-      ],
-      "lastUpload": "2026-09-03",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 11,
-      "hubUrl": "https://huggingface.co/datasets/R1-HSP/R1_passage_merged",
-      "isDuplicateOf": null
-    },
-    {
       "id": "DataLabHell/so100_stack_cubes_merged",
       "name": "so100_stack_cubes_merged",
       "owner": "DataLabHell",
@@ -851029,48 +850153,6 @@
       },
       "downloads": 192,
       "hubUrl": "https://huggingface.co/datasets/LinhanWang/y1_cup_tasks_merged_20260831",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "R1-HSP/R1_passage_merged_with_navbase",
-      "name": "R1_passage_merged_with_navbase",
-      "owner": "R1-HSP",
-      "robotType": "r1",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.stereo_left": "unknown",
-        "observation.images.stereo_right": "unknown"
-      },
-      "fps": 10,
-      "actionDim": 24,
-      "stateDim": 27,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels",
-        "uncalibrated_or_unknown_units"
-      ],
-      "lastUpload": "2026-09-03",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 3,
-      "hubUrl": "https://huggingface.co/datasets/R1-HSP/R1_passage_merged_with_navbase",
       "isDuplicateOf": null
     },
     {
@@ -851506,45 +850588,6 @@
       },
       "downloads": 198,
       "hubUrl": "https://huggingface.co/datasets/xerous/fr3_lift",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "jamesclawson/so101_cube_pick_and_place_dualcam_v1",
-      "name": "so101_cube_pick_and_place_dualcam_v1",
-      "owner": "jamesclawson",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 51,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.arm": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-15",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 389,
-      "hubUrl": "https://huggingface.co/datasets/jamesclawson/so101_cube_pick_and_place_dualcam_v1",
       "isDuplicateOf": null
     },
     {
@@ -904656,47 +903699,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "K-vr/cube_stack3",
-      "name": "cube_stack3",
-      "owner": "K-vr",
-      "robotType": "so_follower_7dof",
-      "bimanual": true,
-      "hardwareType": "dual_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 120,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.left_cam_left": "unknown",
-        "observation.images.left_cam_scene": "exterior",
-        "observation.images.right_cam_right": "unknown",
-        "observation.images.right_cam_scene_realsense": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 14,
-      "stateDim": 14,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-21",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 45,
-      "hubUrl": "https://huggingface.co/datasets/K-vr/cube_stack3",
-      "isDuplicateOf": null
-    },
-    {
       "id": "lanyard2400/soarm_pp_rgb_red_target_9x13pts_frontback_117ep_r1",
       "name": "soarm_pp_rgb_red_target_9x13pts_frontback_117ep_r1",
       "owner": "lanyard2400",
@@ -909308,6 +908310,576 @@
       },
       "downloads": 155,
       "hubUrl": "https://huggingface.co/datasets/ssabats/object-placing-coffe-box_20260925_171612",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "vicshi97/sock-garbage-merged_2.0_yolo",
+      "name": "sock-garbage-merged_2.0_yolo",
+      "owner": "vicshi97",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 200,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.base": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 46,
+      "hubUrl": "https://huggingface.co/datasets/vicshi97/sock-garbage-merged_2.0_yolo",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "alfinwilliam30/so101_sim_v4",
+      "name": "so101_sim_v4",
+      "owner": "alfinwilliam30",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 312,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 11,
+      "hubUrl": "https://huggingface.co/datasets/alfinwilliam30/so101_sim_v4",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "ChaptTwoTonyStark/so101_block_to_cup_v1",
+      "name": "so101_block_to_cup_v1",
+      "owner": "ChaptTwoTonyStark",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.scene": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 24,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/ChaptTwoTonyStark/so101_block_to_cup_v1",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "therarelab/medkit_bottle_pickplace_so100",
+      "name": "medkit_bottle_pickplace_so100",
+      "owner": "therarelab",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 140,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.overhead": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/therarelab/medkit_bottle_pickplace_so100",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "bigdra/xlerobot-pick_red",
+      "name": "xlerobot-pick_red",
+      "owner": "bigdra",
+      "robotType": "xlerobot_client",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.head": "unknown",
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 17,
+      "stateDim": 17,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/bigdra/xlerobot-pick_red",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "dpak0724/so101_toh_60ep_2cam",
+      "name": "so101_toh_60ep_2cam",
+      "owner": "dpak0724",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 60,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/dpak0724/so101_toh_60ep_2cam",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "dpak0724/so101_toh_79ep_2cam",
+      "name": "so101_toh_79ep_2cam",
+      "owner": "dpak0724",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 79,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/dpak0724/so101_toh_79ep_2cam",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "ravediamond/botfails-h264-224",
+      "name": "botfails-h264-224",
+      "owner": "ravediamond",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 323,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.logitech_1": "unknown",
+        "observation.images.logitech_2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "broken",
+        "label": "Broken",
+        "color": "var(--critical)"
+      },
+      "qualityFlags": [
+        "frame_count_mismatch",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/ravediamond/botfails-h264-224",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "fanqi-robo/insert_actuator_into_camera_mount",
+      "name": "insert_actuator_into_camera_mount",
+      "owner": "fanqi-robo",
+      "robotType": "lerobot/_yam",
+      "bimanual": true,
+      "hardwareType": "dual_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist",
+        "observation.images.top": "exterior"
+      },
+      "fps": 20,
+      "actionDim": 14,
+      "stateDim": 14,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/fanqi-robo/insert_actuator_into_camera_mount",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "aiyi1/test2",
+      "name": "test2",
+      "owner": "aiyi1",
+      "robotType": "unknown",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 60064,
+      "cameras": 1,
+      "cameraRoles": {
+        "observation.images.image": "unknown"
+      },
+      "fps": 5,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-12",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/aiyi1/test2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "xsatvik/orange_mixer_1",
+      "name": "orange_mixer_1",
+      "owner": "xsatvik",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 60,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.laptop": "exterior",
+        "observation.images.phone": "exterior",
+        "observation.images.Lwebcam": "unknown",
+        "observation.images.macwebcam": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2025-01-11",
+      "taskString": "pick orange and place in mixer",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.69
+      },
+      "downloads": 77,
+      "hubUrl": "https://huggingface.co/datasets/xsatvik/orange_mixer_1",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "xsatvik/mixer_on_off",
+      "name": "mixer_on_off",
+      "owner": "xsatvik",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.laptop": "exterior",
+        "observation.images.phone": "exterior",
+        "observation.images.Lwebcam": "unknown",
+        "observation.images.macwebcam": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2025-01-11",
+      "taskString": "switch the mixer on or off",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.61
+      },
+      "downloads": 71,
+      "hubUrl": "https://huggingface.co/datasets/xsatvik/mixer_on_off",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "xsatvik/orange_pick_place_new1",
+      "name": "orange_pick_place_new1",
+      "owner": "xsatvik",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 80,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.laptop": "exterior",
+        "observation.images.phone": "exterior",
+        "observation.images.Lwebcam": "unknown",
+        "observation.images.macwebcam": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2025-01-13",
+      "taskString": "place orange in mixer",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.56
+      },
+      "downloads": 80,
+      "hubUrl": "https://huggingface.co/datasets/xsatvik/orange_pick_place_new1",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "xsatvik/mixer_on_off_new",
+      "name": "mixer_on_off_new",
+      "owner": "xsatvik",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.laptop": "exterior",
+        "observation.images.phone": "exterior",
+        "observation.images.Lwebcam": "unknown",
+        "observation.images.macwebcam": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2025-01-13",
+      "taskString": "on off mixer",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.08
+      },
+      "downloads": 179,
+      "hubUrl": "https://huggingface.co/datasets/xsatvik/mixer_on_off_new",
       "isDuplicateOf": null
     }
   ]
