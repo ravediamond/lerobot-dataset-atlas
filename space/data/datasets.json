@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "count": 22419,
+  "count": 22427,
   "datasets": [
     {
       "id": "EgoSteer/EgoSteer-RealWorld",
@@ -660304,49 +660304,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "fecasado/Ncubes-to-Nbaskets-OLD",
-      "name": "Ncubes-to-Nbaskets-OLD",
-      "owner": "fecasado",
-      "robotType": "blueberry_ros",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "assembly",
-        "label": "Assembly / insertion",
-        "color": "#c98500"
-      },
-      "episodes": 172,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.left": "unknown",
-        "observation.images.right": "unknown",
-        "observation.images.user": "unknown",
-        "observation.images.user_gaze": "unknown"
-      },
-      "fps": 15,
-      "actionDim": 26,
-      "stateDim": 55,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "uncalibrated_or_unknown_units"
-      ],
-      "lastUpload": "2026-06-25",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 16,
-      "hubUrl": "https://huggingface.co/datasets/fecasado/Ncubes-to-Nbaskets-OLD",
-      "isDuplicateOf": null
-    },
-    {
       "id": "VibeCuisine/jetson1-062526-place-doris",
       "name": "jetson1-062526-place-doris",
       "owner": "VibeCuisine",
@@ -734672,44 +734629,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "a0loshi1/stack_green_blue_20260720_210657",
-      "name": "stack_green_blue_20260720_210657",
-      "owner": "a0loshi1",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 1,
-      "cameraRoles": {
-        "observation.images.front": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-07-20",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 26,
-      "hubUrl": "https://huggingface.co/datasets/a0loshi1/stack_green_blue_20260720_210657",
-      "isDuplicateOf": null
-    },
-    {
       "id": "crislmfroes/robocasa-atomic-close-fridge",
       "name": "robocasa-atomic-close-fridge",
       "owner": "crislmfroes",
@@ -738083,44 +738002,6 @@
       },
       "downloads": 679,
       "hubUrl": "https://huggingface.co/datasets/VibeCuisine/recreate-bug-pre-fix-v1-trim",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "a0loshi1/pickplace_cube_20260721_215440",
-      "name": "pickplace_cube_20260721_215440",
-      "owner": "a0loshi1",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 1,
-      "cameraRoles": {
-        "observation.images.front": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-07-21",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 35,
-      "hubUrl": "https://huggingface.co/datasets/a0loshi1/pickplace_cube_20260721_215440",
       "isDuplicateOf": null
     },
     {
@@ -816906,47 +816787,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "lenawngr/SWITCH-2-bottom_clean",
-      "name": "SWITCH-2-bottom_clean",
-      "owner": "lenawngr",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 60,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.gripper": "unknown",
-        "observation.images.top": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels"
-      ],
-      "lastUpload": "2026-08-21",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 71,
-      "hubUrl": "https://huggingface.co/datasets/lenawngr/SWITCH-2-bottom_clean",
-      "isDuplicateOf": null
-    },
-    {
       "id": "s1eepypillow/grad_block_random_merged",
       "name": "grad_block_random_merged",
       "owner": "s1eepypillow",
@@ -843943,48 +843783,6 @@
       },
       "downloads": 184,
       "hubUrl": "https://huggingface.co/datasets/Jakub1210/record-k2-test-12x12-D",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "a0loshi1/stack_cubes_v3",
-      "name": "stack_cubes_v3",
-      "owner": "a0loshi1",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "assembly",
-        "label": "Assembly / insertion",
-        "color": "#c98500"
-      },
-      "episodes": 101,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.front_depth": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "bad_camera_feed"
-      ],
-      "lastUpload": "2026-09-02",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 109,
-      "hubUrl": "https://huggingface.co/datasets/a0loshi1/stack_cubes_v3",
       "isDuplicateOf": null
     },
     {
@@ -900255,46 +900053,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "Sweetofu/pick_and_place",
-      "name": "pick_and_place",
-      "owner": "Sweetofu",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-23",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 47,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/pick_and_place",
-      "isDuplicateOf": null
-    },
-    {
       "id": "THULab/axiboai_piper_umi_ee_pick_place",
       "name": "axiboai_piper_umi_ee_pick_place",
       "owner": "THULab",
@@ -908243,45 +908001,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "zeroanuj/ur7_b_into_a_48h_w0_p02",
-      "name": "ur7_b_into_a_48h_w0_p02",
-      "owner": "zeroanuj",
-      "robotType": "ur7e_robotiq_d405",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "assembly",
-        "label": "Assembly / insertion",
-        "color": "#c98500"
-      },
-      "episodes": 201,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.wrist": "wrist",
-        "observation.images.wrist_depth": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 16,
-      "stateDim": 16,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-10-12",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 217,
-      "hubUrl": "https://huggingface.co/datasets/zeroanuj/ur7_b_into_a_48h_w0_p02",
-      "isDuplicateOf": null
-    },
-    {
       "id": "ravediamond/so101-bowls-h264-224",
       "name": "so101-bowls-h264-224",
       "owner": "ravediamond",
@@ -908318,45 +908037,6 @@
       },
       "downloads": 56,
       "hubUrl": "https://huggingface.co/datasets/ravediamond/so101-bowls-h264-224",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "zeroanuj/ur7_b_into_a_48h_w2_p02",
-      "name": "ur7_b_into_a_48h_w2_p02",
-      "owner": "zeroanuj",
-      "robotType": "ur7e_robotiq_d405",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 203,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.wrist": "wrist",
-        "observation.images.wrist_depth": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 16,
-      "stateDim": 16,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-10-12",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 86,
-      "hubUrl": "https://huggingface.co/datasets/zeroanuj/ur7_b_into_a_48h_w2_p02",
       "isDuplicateOf": null
     },
     {
@@ -908597,6 +908277,711 @@
       },
       "downloads": 59,
       "hubUrl": "https://huggingface.co/datasets/bilimili/xlerobot-dice-4cam-v2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_ZipUp",
+      "name": "G1_Dex1_ZipUp",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1006,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 939,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_ZipUp",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "jammin0319/so101_tape_to_box",
+      "name": "so101_tape_to_box",
+      "owner": "jammin0319",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-13",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 28,
+      "hubUrl": "https://huggingface.co/datasets/jammin0319/so101_tape_to_box",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Deviant65/so101_redcube_3new",
+      "name": "so101_redcube_3new",
+      "owner": "Deviant65",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 143,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.top": "exterior",
+        "observation.images.base": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-13",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Deviant65/so101_redcube_3new",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Unlock",
+      "name": "G1_Dex1_Unlock",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 970,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 951,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Unlock",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_OrganizePencilCase",
+      "name": "G1_Dex1_OrganizePencilCase",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1024,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1666,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_OrganizePencilCase",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_SpellRobot",
+      "name": "G1_Dex1_SpellRobot",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 1018,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1806,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_SpellRobot",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_ConveyorSorting",
+      "name": "G1_Dex1_ConveyorSorting",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1049,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1534,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_ConveyorSorting",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_ColorArrangement",
+      "name": "G1_Dex1_ColorArrangement",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1533,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1403,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_ColorArrangement",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_OrganizeStationery",
+      "name": "G1_Dex1_OrganizeStationery",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1028,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1119,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_OrganizeStationery",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Collect_Eggs",
+      "name": "G1_Dex1_Collect_Eggs",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 1000,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1153,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Collect_Eggs",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Arrange_Flowers",
+      "name": "G1_Dex1_Arrange_Flowers",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1000,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1083,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Arrange_Flowers",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_StackBowls",
+      "name": "G1_Dex1_StackBowls",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 979,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 818,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_StackBowls",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Hang_Hat",
+      "name": "G1_Dex1_Hang_Hat",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 500,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 780,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Hang_Hat",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Color_Category",
+      "name": "G1_Dex1_Color_Category",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 500,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1021,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Color_Category",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Conveyor_Color_Classification",
+      "name": "G1_Dex1_Conveyor_Color_Classification",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 500,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 809,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Conveyor_Color_Classification",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Organize_Desk",
+      "name": "G1_Dex1_Organize_Desk",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1030,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1615,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Organize_Desk",
       "isDuplicateOf": null
     }
   ]
