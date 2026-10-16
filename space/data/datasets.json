@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "count": 22438,
+  "count": 22440,
   "datasets": [
     {
       "id": "EgoSteer/EgoSteer-RealWorld",
@@ -689,46 +689,6 @@
       },
       "downloads": 114,
       "hubUrl": "https://huggingface.co/datasets/mrkschtr/imperio_lego",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "gdiazsrl/three_blocks_stack_sep22",
-      "name": "three_blocks_stack_sep22",
-      "owner": "gdiazsrl",
-      "robotType": "moonbot_teleop",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 296,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.eef": "wrist",
-        "observation.images.right": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 8,
-      "stateDim": 21,
-      "actionUnits": "radians",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-22",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 84,
-      "hubUrl": "https://huggingface.co/datasets/gdiazsrl/three_blocks_stack_sep22",
       "isDuplicateOf": null
     },
     {
@@ -39973,48 +39933,6 @@
       },
       "downloads": 41,
       "hubUrl": "https://huggingface.co/datasets/iantc104/scooper_ur5",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "Vertax/act_koch_pick_place_rgb_lego",
-      "name": "act_koch_pick_place_rgb_lego",
-      "owner": "Vertax",
-      "robotType": "koch",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 131,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.wrist": "wrist",
-        "observation.images.fixed": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_stats_file",
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-05-06",
-      "taskString": "Grasp RGB lego blocks and put them in the bin one by one.",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 4.12
-      },
-      "downloads": 38,
-      "hubUrl": "https://huggingface.co/datasets/Vertax/act_koch_pick_place_rgb_lego",
       "isDuplicateOf": null
     },
     {
@@ -130000,48 +129918,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "Vertax/xense-so101-place-by-colors",
-      "name": "xense-so101-place-by-colors",
-      "owner": "Vertax",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 52,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.side": "exterior"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "unknown",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_stats_file",
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-09-03",
-      "taskString": "Grab multipule cubes and plcae by colors",
-      "taskStringQuality": {
-        "total": 1,
-        "placeholder_count": 0,
-        "avg_entropy": 3.94
-      },
-      "downloads": 311,
-      "hubUrl": "https://huggingface.co/datasets/Vertax/xense-so101-place-by-colors",
-      "isDuplicateOf": null
-    },
-    {
       "id": "ddfj34/record-test-202500903-1920",
       "name": "record-test-202500903-1920",
       "owner": "ddfj34",
@@ -180979,48 +180855,6 @@
       },
       "downloads": 102,
       "hubUrl": "https://huggingface.co/datasets/Faless/piper_3apples_rdm_position",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "Vertax/xense_bi_arx5_tie_white_shoelaces_1030_no_adjust",
-      "name": "xense_bi_arx5_tie_white_shoelaces_1030_no_adjust",
-      "owner": "Vertax",
-      "robotType": "arx5",
-      "bimanual": true,
-      "hardwareType": "dual_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.head": "unknown",
-        "observation.images.left_wrist": "wrist",
-        "observation.images.right_wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 14,
-      "stateDim": 14,
-      "actionUnits": "radians",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2025-12-17",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 42,
-      "hubUrl": "https://huggingface.co/datasets/Vertax/xense_bi_arx5_tie_white_shoelaces_1030_no_adjust",
       "isDuplicateOf": null
     },
     {
@@ -316053,7 +315887,7 @@
         "label": "Fine manipulation",
         "color": "#d95926"
       },
-      "episodes": 200,
+      "episodes": 930,
       "cameras": 8,
       "cameraRoles": {
         "observation.images.head_stereo_left": "unknown",
@@ -316077,14 +315911,14 @@
       "qualityFlags": [
         "no_quantile_stats"
       ],
-      "lastUpload": "2026-09-23",
+      "lastUpload": "2026-10-14",
       "taskString": "Wipe the water off the table with a rag.",
       "taskStringQuality": {
         "total": 1,
         "placeholder_count": 0,
         "avg_entropy": 3.62
       },
-      "downloads": 1656,
+      "downloads": 4031,
       "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Wipe_Table",
       "isDuplicateOf": null
     },
@@ -672345,50 +672179,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "Vertax/huili_shoe_insole_retrieval_and_packing_0602",
-      "name": "huili_shoe_insole_retrieval_and_packing_0602",
-      "owner": "Vertax",
-      "robotType": "flexiv_rizon4_rt",
-      "bimanual": true,
-      "hardwareType": "dual_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 69,
-      "cameras": 7,
-      "cameraRoles": {
-        "observation.images.head": "unknown",
-        "observation.images.left_wrist": "wrist",
-        "observation.images.right_wrist": "wrist",
-        "observation.images.left_tactile_0": "unknown",
-        "observation.images.left_tactile_1": "unknown",
-        "observation.images.right_tactile_0": "unknown",
-        "observation.images.right_tactile_1": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 20,
-      "stateDim": 20,
-      "actionUnits": "radians",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-07-01",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 109,
-      "hubUrl": "https://huggingface.co/datasets/Vertax/huili_shoe_insole_retrieval_and_packing_0602",
-      "isDuplicateOf": null
-    },
-    {
       "id": "KHandsome/Task-one-2nd-onebun",
       "name": "Task-one-2nd-onebun",
       "owner": "KHandsome",
@@ -856434,45 +856224,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "zjushine/nero-all",
-      "name": "nero-all",
-      "owner": "zjushine",
-      "robotType": "nero_pico4",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 139,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 10,
-      "stateDim": 17,
-      "actionUnits": "normalized",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-06",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 205,
-      "hubUrl": "https://huggingface.co/datasets/zjushine/nero-all",
-      "isDuplicateOf": null
-    },
-    {
       "id": "EdwardoSunny/xarm_charger_binmarker9",
       "name": "xarm_charger_binmarker9",
       "owner": "EdwardoSunny",
@@ -859646,45 +859397,6 @@
       },
       "downloads": 60,
       "hubUrl": "https://huggingface.co/datasets/jogarulfop/rollout_2026-09-07_shake4it_bench_5sensors_v3_dgf_passif_10kHz_nfft_512_20260907_141249",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "zjushine/nero-move-all",
-      "name": "nero-move-all",
-      "owner": "zjushine",
-      "robotType": "nero_pico4",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 136,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 10,
-      "stateDim": 17,
-      "actionUnits": "normalized",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-07",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 210,
-      "hubUrl": "https://huggingface.co/datasets/zjushine/nero-move-all",
       "isDuplicateOf": null
     },
     {
@@ -907193,45 +906905,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "ChaptTwoTonyStark/so101_block_to_cup_v1",
-      "name": "so101_block_to_cup_v1",
-      "owner": "ChaptTwoTonyStark",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 50,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.scene": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 24,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-10-12",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 0,
-      "hubUrl": "https://huggingface.co/datasets/ChaptTwoTonyStark/so101_block_to_cup_v1",
-      "isDuplicateOf": null
-    },
-    {
       "id": "therarelab/medkit_bottle_pickplace_so100",
       "name": "medkit_bottle_pickplace_so100",
       "owner": "therarelab",
@@ -908863,14 +908536,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-14",
+      "lastUpload": "2026-10-15",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 29,
+      "downloads": 2141,
       "hubUrl": "https://huggingface.co/datasets/lerobot/FineART",
       "isDuplicateOf": null
     },
@@ -909517,6 +909190,451 @@
       },
       "downloads": 702,
       "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Assemble_Hat_Stand",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "zhoumiaosen/libero_object_gray",
+      "name": "libero_object_gray",
+      "owner": "zhoumiaosen",
+      "robotType": "panda",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 454,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.image": "unknown",
+        "observation.images.image2": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "actionUnits": "normalized",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-13",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 97,
+      "hubUrl": "https://huggingface.co/datasets/zhoumiaosen/libero_object_gray",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "zhoumiaosen/libero_spatial_gray",
+      "name": "libero_spatial_gray",
+      "owner": "zhoumiaosen",
+      "robotType": "panda",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 432,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.image": "unknown",
+        "observation.images.image2": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "actionUnits": "normalized",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-13",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 100,
+      "hubUrl": "https://huggingface.co/datasets/zhoumiaosen/libero_spatial_gray",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "zhoumiaosen/libero_goal_gray",
+      "name": "libero_goal_gray",
+      "owner": "zhoumiaosen",
+      "robotType": "panda",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 428,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.image": "unknown",
+        "observation.images.image2": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 7,
+      "stateDim": 8,
+      "actionUnits": "normalized",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-13",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 99,
+      "hubUrl": "https://huggingface.co/datasets/zhoumiaosen/libero_goal_gray",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Cap_The_Pen",
+      "name": "G1_Dex1_Cap_The_Pen",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 290,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 841,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Cap_The_Pen",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Cover_The_Tool_Box",
+      "name": "G1_Dex1_Cover_The_Tool_Box",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 290,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 812,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Cover_The_Tool_Box",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Assembling_Motor",
+      "name": "G1_Dex1_Assembling_Motor",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 1770,
+      "cameras": 6,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "bad_camera_feed",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1514,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Assembling_Motor",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Drawstring_Bag_For_Supplies",
+      "name": "G1_Dex1_Drawstring_Bag_For_Supplies",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 797,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Drawstring_Bag_For_Supplies",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Cup_Storage",
+      "name": "G1_Dex1_Cup_Storage",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 875,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Cup_Storage",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Guess_Ball",
+      "name": "G1_Dex1_Guess_Ball",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 654,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Guess_Ball",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Hang_Keys",
+      "name": "G1_Dex1_Hang_Keys",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 250,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-15",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 619,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Hang_Keys",
       "isDuplicateOf": null
     }
   ]
