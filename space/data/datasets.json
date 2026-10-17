@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "count": 22440,
+  "count": 22452,
   "datasets": [
     {
       "id": "EgoSteer/EgoSteer-RealWorld",
@@ -909635,6 +909635,570 @@
       },
       "downloads": 619,
       "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Hang_Keys",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Drawstring_Bag_Towel_Storage",
+      "name": "G1_Dex1_Drawstring_Bag_Towel_Storage",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 914,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Drawstring_Bag_Towel_Storage",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Fill_Basket",
+      "name": "G1_Dex1_Fill_Basket",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 777,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Fill_Basket",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Hang_Pants",
+      "name": "G1_Dex1_Hang_Pants",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1400,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-15",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1310,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Hang_Pants",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Install_Screw_Head",
+      "name": "G1_Dex1_Install_Screw_Head",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 180,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 979,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Install_Screw_Head",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Plastic_Bag_Storage",
+      "name": "G1_Dex1_Plastic_Bag_Storage",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 914,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Plastic_Bag_Storage",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Packaged_Bread",
+      "name": "G1_Dex1_Packaged_Bread",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 290,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1004,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Packaged_Bread",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Open_Box",
+      "name": "G1_Dex1_Open_Box",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 290,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1165,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Open_Box",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Pour_Drink",
+      "name": "G1_Dex1_Pour_Drink",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 850,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-15",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1091,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Pour_Drink",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Put_Fruit_Into_Juicer",
+      "name": "G1_Dex1_Put_Fruit_Into_Juicer",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 200,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 877,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Put_Fruit_Into_Juicer",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Put_Pens_In_Box",
+      "name": "G1_Dex1_Put_Pens_In_Box",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 250,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-15",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 877,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Put_Pens_In_Box",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Store_Coins",
+      "name": "G1_Dex1_Store_Coins",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 200,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 835,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Store_Coins",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "unitreerobotics/G1_Dex1_Pour_From_Bottle",
+      "name": "G1_Dex1_Pour_From_Bottle",
+      "owner": "unitreerobotics",
+      "robotType": "unitree_g1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 300,
+      "cameras": 8,
+      "cameraRoles": {
+        "observation.images.head_stereo_left": "unknown",
+        "observation.images.head_stereo_right": "unknown",
+        "observation.images.wrist_left": "wrist",
+        "observation.images.wrist_right": "wrist",
+        "observation.images.wrist_left_ir": "wrist",
+        "observation.images.wrist_right_ir": "wrist",
+        "observation.images.head_stereo_left_rec": "unknown",
+        "observation.images.head_stereo_right_rec": "unknown"
+      },
+      "fps": 30,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 948,
+      "hubUrl": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Pour_From_Bottle",
       "isDuplicateOf": null
     }
   ]
