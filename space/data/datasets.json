@@ -1,6 +1,6 @@
 {
   "generated": true,
-  "count": 23723,
+  "count": 23765,
   "datasets": [
     {
       "id": "EgoSteer/EgoSteer-RealWorld",
@@ -847932,22 +847932,22 @@
       "stateDim": 43,
       "actionUnits": "unknown",
       "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
       },
       "qualityFlags": [
-        "no_stats_file",
+        "camera_stats_missing",
         "no_quantile_stats"
       ],
-      "lastUpload": "2026-09-04",
+      "lastUpload": "2026-10-20",
       "taskString": "walk to the trash bag",
       "taskStringQuality": {
         "total": 5,
         "placeholder_count": 0,
         "avg_entropy": 3.26
       },
-      "downloads": 416,
+      "downloads": 1453,
       "hubUrl": "https://huggingface.co/datasets/mncai/G1_Dex3_Trash_LocoManipulation",
       "isDuplicateOf": null
     },
@@ -915664,7 +915664,7 @@
       "id": "Sweetofu/transfer_pen",
       "name": "transfer_pen",
       "owner": "Sweetofu",
-      "robotType": "so100",
+      "robotType": "so101",
       "bimanual": false,
       "hardwareType": "single_arm",
       "cat": {
@@ -915684,19 +915684,21 @@
       "stateDim": 6,
       "actionUnits": "degrees",
       "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
       },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-23",
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 191,
+      "downloads": 127,
       "hubUrl": "https://huggingface.co/datasets/Sweetofu/transfer_pen",
       "isDuplicateOf": null
     },
@@ -921418,48 +921420,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "wwqcleverghost/handover1",
-      "name": "handover1",
-      "owner": "wwqcleverghost",
-      "robotType": "xlerobot_client",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "bimanual",
-        "label": "Bimanual coordination",
-        "color": "#199e70"
-      },
-      "episodes": 50,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.left_wrist": "wrist",
-        "observation.images.right_wrist": "wrist",
-        "observation.images.head(RGDB)": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 17,
-      "stateDim": 17,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels"
-      ],
-      "lastUpload": "2026-09-29",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 117,
-      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/handover1",
-      "isDuplicateOf": null
-    },
-    {
       "id": "Jiamo0912/so101-stack-bowls",
       "name": "so101-stack-bowls",
       "owner": "Jiamo0912",
@@ -922905,46 +922865,6 @@
       },
       "downloads": 90,
       "hubUrl": "https://huggingface.co/datasets/Jun226/pick_and_place_4",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "Sweetofu/transfer_pen_2",
-      "name": "transfer_pen_2",
-      "owner": "Sweetofu",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-09-30",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 119,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/transfer_pen_2",
       "isDuplicateOf": null
     },
     {
@@ -926042,48 +925962,6 @@
       },
       "downloads": 150,
       "hubUrl": "https://huggingface.co/datasets/Long27/so101_cartesian_dr_worldclass_500ep",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "wwqcleverghost/handover2",
-      "name": "handover2",
-      "owner": "wwqcleverghost",
-      "robotType": "xlerobot_client",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "bimanual",
-        "label": "Bimanual coordination",
-        "color": "#199e70"
-      },
-      "episodes": 50,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.left_wrist": "wrist",
-        "observation.images.right_wrist": "wrist",
-        "observation.images.head(RGDB)": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 17,
-      "stateDim": 17,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels"
-      ],
-      "lastUpload": "2026-10-01",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 116,
-      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/handover2",
       "isDuplicateOf": null
     },
     {
@@ -929878,47 +929756,6 @@
       },
       "downloads": 155,
       "hubUrl": "https://huggingface.co/datasets/mufasabozyel/03_20261004_135207",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "woodr/lerobot_teaching_HS_PicknPlace_1004",
-      "name": "lerobot_teaching_HS_PicknPlace_1004",
-      "owner": "woodr",
-      "robotType": "ur5e_freedrive",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 100,
-      "cameras": 4,
-      "cameraRoles": {
-        "observation.images.front": "exterior",
-        "observation.images.side": "exterior",
-        "observation.images.base": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 7,
-      "stateDim": 7,
-      "actionUnits": "radians",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-10-04",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 127,
-      "hubUrl": "https://huggingface.co/datasets/woodr/lerobot_teaching_HS_PicknPlace_1004",
       "isDuplicateOf": null
     },
     {
@@ -936323,14 +936160,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-15",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 258,
+      "downloads": 265,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-05_insert_04-rinse-with-rinse",
       "isDuplicateOf": null
     },
@@ -936364,14 +936201,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-15",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 285,
+      "downloads": 289,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-07_insert_01-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -936405,14 +936242,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-15",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 233,
+      "downloads": 237,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-07_insert_02-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -939079,7 +938916,7 @@
         "label": "Fine manipulation",
         "color": "#d95926"
       },
-      "episodes": 50,
+      "episodes": 60,
       "cameras": 3,
       "cameraRoles": {
         "observation.images.top": "exterior",
@@ -939096,14 +938933,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-12",
+      "lastUpload": "2026-10-19",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 529,
+      "downloads": 531,
       "hubUrl": "https://huggingface.co/datasets/SalZa2004/so101_track_rails_depth_2",
       "isDuplicateOf": null
     },
@@ -939266,48 +939103,6 @@
       },
       "downloads": 153,
       "hubUrl": "https://huggingface.co/datasets/castanetnicolas/mimicgen_three_piece_assembly_d1_image84",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "Sweetofu/transfer_pen_gridS",
-      "name": "transfer_pen_gridS",
-      "owner": "Sweetofu",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-10-14",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 122,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/transfer_pen_gridS",
       "isDuplicateOf": null
     },
     {
@@ -950189,48 +949984,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "Sweetofu/pick_and_place_gridS",
-      "name": "pick_and_place_gridS",
-      "owner": "Sweetofu",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-10-14",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 85,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/pick_and_place_gridS",
-      "isDuplicateOf": null
-    },
-    {
       "id": "rainbowrobotics/JIMTOF_real_20261014_132034",
       "name": "JIMTOF_real_20261014_132034",
       "owner": "rainbowrobotics",
@@ -950340,14 +950093,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-19",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 141,
+      "downloads": 174,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_01-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -950790,48 +950543,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "Sweetofu/stack_cubes_gridS",
-      "name": "stack_cubes_gridS",
-      "owner": "Sweetofu",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-10-14",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 74,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/stack_cubes_gridS",
-      "isDuplicateOf": null
-    },
-    {
       "id": "yamaisanerd/clean_20261014_combined",
       "name": "clean_20261014_combined",
       "owner": "yamaisanerd",
@@ -951148,48 +950859,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "wwqcleverghost/handover2-trimmed",
-      "name": "handover2-trimmed",
-      "owner": "wwqcleverghost",
-      "robotType": "xlerobot_client",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "bimanual",
-        "label": "Bimanual coordination",
-        "color": "#199e70"
-      },
-      "episodes": 50,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.left_wrist": "wrist",
-        "observation.images.right_wrist": "wrist",
-        "observation.images.head(RGDB)": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 17,
-      "stateDim": 17,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels"
-      ],
-      "lastUpload": "2026-10-14",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 60,
-      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/handover2-trimmed",
-      "isDuplicateOf": null
-    },
-    {
       "id": "anuma/so101_pair_mix2",
       "name": "so101_pair_mix2",
       "owner": "anuma",
@@ -951266,47 +950935,6 @@
       },
       "downloads": 61,
       "hubUrl": "https://huggingface.co/datasets/1ys1/areumii-smolvla-handover-doubletask-v2-145",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "chrisw-shadow/ur10e_dexee_centrifuge_vial_insertion",
-      "name": "ur10e_dexee_centrifuge_vial_insertion",
-      "owner": "chrisw-shadow",
-      "robotType": "ur10e_dexee",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
-      },
-      "episodes": 156,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.fixed": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 50,
-      "actionDim": 21,
-      "stateDim": 42,
-      "actionUnits": "radians",
-      "q": {
-        "key": "degraded",
-        "label": "Degraded",
-        "color": "var(--serious)"
-      },
-      "qualityFlags": [
-        "some_dead_action_channels"
-      ],
-      "lastUpload": "2026-10-16",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 132,
-      "hubUrl": "https://huggingface.co/datasets/chrisw-shadow/ur10e_dexee_centrifuge_vial_insertion",
       "isDuplicateOf": null
     },
     {
@@ -952538,9 +952166,9 @@
       "bimanual": false,
       "hardwareType": "single_arm",
       "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
       },
       "episodes": 50,
       "cameras": 4,
@@ -952560,14 +952188,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-19",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 112,
+      "downloads": 139,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_02-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -952834,7 +952462,7 @@
         "label": "Fine manipulation",
         "color": "#d95926"
       },
-      "episodes": 326,
+      "episodes": 520,
       "cameras": 2,
       "cameraRoles": {
         "observation.images.wrist": "wrist",
@@ -952850,14 +952478,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-19",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 340,
+      "downloads": 346,
       "hubUrl": "https://huggingface.co/datasets/digas99/so101_screwdriver_box",
       "isDuplicateOf": null
     },
@@ -954734,9 +954362,9 @@
       "bimanual": false,
       "hardwareType": "single_arm",
       "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
       },
       "episodes": 50,
       "cameras": 4,
@@ -954756,14 +954384,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 62,
+      "downloads": 76,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_05-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -954836,14 +954464,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 54,
+      "downloads": 69,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_03-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -954855,11 +954483,11 @@
       "bimanual": false,
       "hardwareType": "single_arm",
       "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
       },
-      "episodes": 291,
+      "episodes": 292,
       "cameras": 2,
       "cameraRoles": {
         "observation.images.wrist": "wrist",
@@ -954875,14 +954503,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-19",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 283,
+      "downloads": 310,
       "hubUrl": "https://huggingface.co/datasets/Hailey-5-2026/rollout_robotA_ep114_repeatability_test_20261014",
       "isDuplicateOf": null
     },
@@ -954916,14 +954544,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 45,
+      "downloads": 66,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_04-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -954957,14 +954585,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 48,
+      "downloads": 66,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_08-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -955036,14 +954664,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 46,
+      "downloads": 63,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_07-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -955116,14 +954744,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-16",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 52,
+      "downloads": 70,
       "hubUrl": "https://huggingface.co/datasets/lyl472324464/2026-10-13_insert_06-lerobot-with-rinse",
       "isDuplicateOf": null
     },
@@ -960387,6 +960015,45 @@
       "isDuplicateOf": null
     },
     {
+      "id": "cleany-ai/cleany_plastic",
+      "name": "cleany_plastic",
+      "owner": "cleany-ai",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 60,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 25,
+      "hubUrl": "https://huggingface.co/datasets/cleany-ai/cleany_plastic",
+      "isDuplicateOf": null
+    },
+    {
       "id": "VMuccio/red_cube_g_trimmed",
       "name": "red_cube_g_trimmed",
       "owner": "VMuccio",
@@ -960669,11 +960336,11 @@
       "bimanual": true,
       "hardwareType": "dual_arm",
       "cat": {
-        "key": "manipulation",
-        "label": "Fine manipulation",
-        "color": "#d95926"
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
       },
-      "episodes": 50,
+      "episodes": 75,
       "cameras": 3,
       "cameraRoles": {
         "observation.images.top": "exterior",
@@ -960690,14 +960357,14 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-18",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
         "placeholder_count": 0,
         "avg_entropy": 0.0
       },
-      "downloads": 0,
+      "downloads": 37,
       "hubUrl": "https://huggingface.co/datasets/zekaili/hanoi-tower",
       "isDuplicateOf": null
     },
@@ -960814,48 +960481,6 @@
       },
       "downloads": 0,
       "hubUrl": "https://huggingface.co/datasets/phonglnd-prdcv/pnp_single_block_low_fps",
-      "isDuplicateOf": null
-    },
-    {
-      "id": "Sweetofu/stack_two_cubes_gridS",
-      "name": "stack_two_cubes_gridS",
-      "owner": "Sweetofu",
-      "robotType": "so101",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "pick_place",
-        "label": "Pick & place",
-        "color": "#3987e5"
-      },
-      "episodes": 80,
-      "cameras": 3,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist",
-        "observation.images.belly": "unknown"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "warning",
-        "label": "Warning",
-        "color": "var(--warning)"
-      },
-      "qualityFlags": [
-        "no_quantile_stats"
-      ],
-      "lastUpload": "2026-10-19",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 0,
-      "hubUrl": "https://huggingface.co/datasets/Sweetofu/stack_two_cubes_gridS",
       "isDuplicateOf": null
     },
     {
@@ -961071,7 +960696,7 @@
         "label": "Pick & place",
         "color": "#3987e5"
       },
-      "episodes": 101,
+      "episodes": 163,
       "cameras": 2,
       "cameraRoles": {
         "observation.images.fixed": "exterior",
@@ -961087,7 +960712,7 @@
         "color": "var(--good)"
       },
       "qualityFlags": [],
-      "lastUpload": "2026-10-19",
+      "lastUpload": "2026-10-20",
       "taskString": "",
       "taskStringQuality": {
         "total": 0,
@@ -961139,45 +960764,6 @@
       "isDuplicateOf": null
     },
     {
-      "id": "FUCTOZO/fuctozo_dif_pol",
-      "name": "fuctozo_dif_pol",
-      "owner": "FUCTOZO",
-      "robotType": "so100",
-      "bimanual": false,
-      "hardwareType": "single_arm",
-      "cat": {
-        "key": "other",
-        "label": "Other / unlabeled",
-        "color": "#9085e9"
-      },
-      "episodes": 69,
-      "cameras": 2,
-      "cameraRoles": {
-        "observation.images.top": "exterior",
-        "observation.images.wrist": "wrist"
-      },
-      "fps": 30,
-      "actionDim": 6,
-      "stateDim": 6,
-      "actionUnits": "degrees",
-      "q": {
-        "key": "clean",
-        "label": "Clean",
-        "color": "var(--good)"
-      },
-      "qualityFlags": [],
-      "lastUpload": "2026-10-19",
-      "taskString": "",
-      "taskStringQuality": {
-        "total": 0,
-        "placeholder_count": 0,
-        "avg_entropy": 0.0
-      },
-      "downloads": 0,
-      "hubUrl": "https://huggingface.co/datasets/FUCTOZO/fuctozo_dif_pol",
-      "isDuplicateOf": null
-    },
-    {
       "id": "Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run2_2026_10_19",
       "name": "eval_LDVLA_bfloat16_Async_pick_V3_run2_2026_10_19",
       "owner": "Alkatt",
@@ -961214,6 +960800,2093 @@
       },
       "downloads": 0,
       "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run2_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "wwqcleverghost/v2-handover2",
+      "name": "v2-handover2",
+      "owner": "wwqcleverghost",
+      "robotType": "xlerobot_client",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist",
+        "observation.images.head(RGDB)": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 17,
+      "stateDim": 17,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 116,
+      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/v2-handover2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "almond-bot/axol_pre_training",
+      "name": "axol_pre_training",
+      "owner": "almond-bot",
+      "robotType": "axol",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 1000,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.overhead_right": "exterior",
+        "observation.images.left_arm": "unknown",
+        "observation.images.right_arm": "unknown",
+        "observation.images.overhead_left": "exterior"
+      },
+      "fps": 60,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 35,
+      "hubUrl": "https://huggingface.co/datasets/almond-bot/axol_pre_training",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "wwqcleverghost/v1-handover1",
+      "name": "v1-handover1",
+      "owner": "wwqcleverghost",
+      "robotType": "xlerobot_client",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist",
+        "observation.images.head(RGDB)": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 17,
+      "stateDim": 17,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 119,
+      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/v1-handover1",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "lichtphyz/so101_block_to_bin",
+      "name": "so101_block_to_bin",
+      "owner": "lichtphyz",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 3,
+      "hubUrl": "https://huggingface.co/datasets/lichtphyz/so101_block_to_bin",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Sweetofu/pick_and_place",
+      "name": "pick_and_place",
+      "owner": "Sweetofu",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 80,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.belly": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 90,
+      "hubUrl": "https://huggingface.co/datasets/Sweetofu/pick_and_place",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Sweetofu/stack_cubes",
+      "name": "stack_cubes",
+      "owner": "Sweetofu",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 80,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.belly": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-14",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 78,
+      "hubUrl": "https://huggingface.co/datasets/Sweetofu/stack_cubes",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "wwqcleverghost/v3-handover2-trimmed",
+      "name": "v3-handover2-trimmed",
+      "owner": "wwqcleverghost",
+      "robotType": "xlerobot_client",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist",
+        "observation.images.head(RGDB)": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 17,
+      "stateDim": 17,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 63,
+      "hubUrl": "https://huggingface.co/datasets/wwqcleverghost/v3-handover2-trimmed",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "lichtphyz/so101_block_to_bin_v3",
+      "name": "so101_block_to_bin_v3",
+      "owner": "lichtphyz",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 125,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 1,
+      "hubUrl": "https://huggingface.co/datasets/lichtphyz/so101_block_to_bin_v3",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Sweetofu/stack_two_cubes",
+      "name": "stack_two_cubes",
+      "owner": "Sweetofu",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 80,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.belly": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 16,
+      "hubUrl": "https://huggingface.co/datasets/Sweetofu/stack_two_cubes",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "villekuosmanen/so101_take_actuator_from_box",
+      "name": "so101_take_actuator_from_box",
+      "owner": "villekuosmanen",
+      "robotType": "so-101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.top_depth": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/villekuosmanen/so101_take_actuator_from_box",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run3_2026_10_19",
+      "name": "eval_LDVLA_bfloat16_Async_pick_V3_run3_2026_10_19",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run3_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run4_2026_10_19",
+      "name": "eval_LDVLA_bfloat16_Async_pick_V3_run4_2026_10_19",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run4_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "shinba/so101_red_cube_bowl_v2",
+      "name": "so101_red_cube_bowl_v2",
+      "owner": "shinba",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 144,
+      "cameras": 1,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/shinba/so101_red_cube_bowl_v2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "villekuosmanen/so101_insert_gear_in_gripper",
+      "name": "so101_insert_gear_in_gripper",
+      "owner": "villekuosmanen",
+      "robotType": "so-101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.top_depth": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/villekuosmanen/so101_insert_gear_in_gripper",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rainbowrobotics/JIMTOF_newrobot_20261019_101628",
+      "name": "JIMTOF_newrobot_20261019_101628",
+      "owner": "rainbowrobotics",
+      "robotType": "rby1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 69,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.right": "unknown",
+        "observation.images.left": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rainbowrobotics/JIMTOF_newrobot_20261019_101628",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run5_2026_10_19",
+      "name": "eval_LDVLA_bfloat16_Async_pick_V3_run5_2026_10_19",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run5_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "villekuosmanen/so101_insert_actuator_into_camera_mount",
+      "name": "so101_insert_actuator_into_camera_mount",
+      "owner": "villekuosmanen",
+      "robotType": "so-101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.top_depth": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/villekuosmanen/so101_insert_actuator_into_camera_mount",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "julien-richaume-aqsone/so101_vials_rack_left",
+      "name": "so101_vials_rack_left",
+      "owner": "julien-richaume-aqsone",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 84,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.ego": "unknown",
+        "observation.images.external_D455": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/julien-richaume-aqsone/so101_vials_rack_left",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run6_2026_10_19",
+      "name": "eval_LDVLA_bfloat16_Async_pick_V3_run6_2026_10_19",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_pick_V3_run6_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run1_2026_10_19",
+      "name": "eval_LDVLA_bfloat16_Async_stack_V3_run1_2026_10_19",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run1_2026_10_19",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "dramaeyp/libero-success-92-aug-20fps",
+      "name": "libero-success-92-aug-20fps",
+      "owner": "dramaeyp",
+      "robotType": "panda",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 1107,
+      "cameras": 2,
+      "cameraRoles": {
+        "image": "unknown",
+        "wrist_image": "wrist"
+      },
+      "fps": 20,
+      "actionDim": null,
+      "stateDim": null,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-19",
+      "taskString": "open the middle drawer of the cabinet",
+      "taskStringQuality": {
+        "total": 36,
+        "placeholder_count": 0,
+        "avg_entropy": 3.68
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/dramaeyp/libero-success-92-aug-20fps",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "davidcrist/Green_Cow_50S_Pos_1_20261019_164323",
+      "name": "Green_Cow_50S_Pos_1_20261019_164323",
+      "owner": "davidcrist",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.Top Camera": "exterior",
+        "observation.images.Craw Camera": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/davidcrist/Green_Cow_50S_Pos_1_20261019_164323",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "learner1119/kt_pick_pringles",
+      "name": "kt_pick_pringles",
+      "owner": "learner1119",
+      "robotType": "ffw_sh5_rev1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.cam_head": "unknown",
+        "observation.images.cam_head_realsense": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 57,
+      "stateDim": 57,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_stats_file",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-19",
+      "taskString": "pick the pringles",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.62
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/learner1119/kt_pick_pringles",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "learner1119/kt_pick_pringles2",
+      "name": "kt_pick_pringles2",
+      "owner": "learner1119",
+      "robotType": "ffw_sh5_rev1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.cam_head": "unknown",
+        "observation.images.cam_head_realsense": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 57,
+      "stateDim": 57,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_stats_file",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-19",
+      "taskString": "pick the pringles",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.62
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/learner1119/kt_pick_pringles2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "villekuosmanen/so101_track_rails_depth_2",
+      "name": "so101_track_rails_depth_2",
+      "owner": "villekuosmanen",
+      "robotType": "so-101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.top": "exterior",
+        "observation.images.wrist": "wrist",
+        "observation.images.top_depth": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/villekuosmanen/so101_track_rails_depth_2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "nsimonato25/purple_block_in_the_box_fr5_left_arm_20hz",
+      "name": "purple_block_in_the_box_fr5_left_arm_20hz",
+      "owner": "nsimonato25",
+      "robotType": "fairino_left_arm",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 106,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.cam_high": "unknown",
+        "observation.images.cam_left_wrist": "wrist"
+      },
+      "fps": 20,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/nsimonato25/purple_block_in_the_box_fr5_left_arm_20hz",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "spapazov22/red_cube_bowl",
+      "name": "red_cube_bowl",
+      "owner": "spapazov22",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.fixed": "exterior",
+        "observation.images.handeye": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/spapazov22/red_cube_bowl",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "tc-huang/mahjong_v1_rack01_red",
+      "name": "mahjong_v1_rack01_red",
+      "owner": "tc-huang",
+      "robotType": "so101",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 500,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front_cam": "exterior",
+        "observation.images.gripper_cam": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/tc-huang/mahjong_v1_rack01_red",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "nchristo-synaptics/QVGA_pick_place_v4",
+      "name": "QVGA_pick_place_v4",
+      "owner": "nchristo-synaptics",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 173,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.top": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/nchristo-synaptics/QVGA_pick_place_v4",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "bsbretly/first_data_set_20261019_152107",
+      "name": "first_data_set_20261019_152107",
+      "owner": "bsbretly",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/bsbretly/first_data_set_20261019_152107",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "murobotics/handumi-towel-raw-562",
+      "name": "handumi-towel-raw-562",
+      "owner": "murobotics",
+      "robotType": "handumi_raw",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 562,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left": "unknown",
+        "observation.images.right": "unknown",
+        "observation.images.top": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "normalized",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-19",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/murobotics/handumi-towel-raw-562",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "murobotics/handumi-towel-piper-562-640",
+      "name": "handumi-towel-piper-562-640",
+      "owner": "murobotics",
+      "robotType": "piper",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "bimanual",
+        "label": "Bimanual coordination",
+        "color": "#199e70"
+      },
+      "episodes": 562,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.left": "unknown",
+        "observation.images.right": "unknown",
+        "observation.images.top": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 14,
+      "stateDim": 14,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/murobotics/handumi-towel-piper-562-640",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rsundaraws/so101_conf1_pickplace_20261019_173930",
+      "name": "so101_conf1_pickplace_20261019_173930",
+      "owner": "rsundaraws",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 63,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.overhead": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rsundaraws/so101_conf1_pickplace_20261019_173930",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "bowenszhu/rebot-b601-t1-pick-place",
+      "name": "rebot-b601-t1-pick-place",
+      "owner": "bowenszhu",
+      "robotType": "rebot_b601_rs_px6d_w2l",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.scene": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/bowenszhu/rebot-b601-t1-pick-place",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "bowenszhu/rebot-b601-t2-language-squares",
+      "name": "rebot-b601-t2-language-squares",
+      "owner": "bowenszhu",
+      "robotType": "rebot_b601_rs_px6d_w2l",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 60,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.scene": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 7,
+      "stateDim": 7,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/bowenszhu/rebot-b601-t2-language-squares",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rsundaraws/so101_conf1_pickplace_v1_clean",
+      "name": "so101_conf1_pickplace_v1_clean",
+      "owner": "rsundaraws",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 61,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.overhead": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rsundaraws/so101_conf1_pickplace_v1_clean",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rainbowrobotics/JIMTOF_newrobot_20261020_005024",
+      "name": "JIMTOF_newrobot_20261020_005024",
+      "owner": "rainbowrobotics",
+      "robotType": "rby1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 69,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.right": "unknown",
+        "observation.images.left": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rainbowrobotics/JIMTOF_newrobot_20261020_005024",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "learner1119/kt_pick_pringles_merge",
+      "name": "kt_pick_pringles_merge",
+      "owner": "learner1119",
+      "robotType": "ffw_sh5_rev1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 100,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.cam_head": "unknown",
+        "observation.images.cam_head_realsense": "unknown"
+      },
+      "fps": 10,
+      "actionDim": 57,
+      "stateDim": 57,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_stats_file",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "pick up the pringles can",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 3.72
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/learner1119/kt_pick_pringles_merge",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "IndiaTechTeamSL2/marker_20261020_104622",
+      "name": "marker_20261020_104622",
+      "owner": "IndiaTechTeamSL2",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "other",
+        "label": "Other / unlabeled",
+        "color": "#9085e9"
+      },
+      "episodes": 50,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.Side Camera": "exterior",
+        "observation.images.Top Camera": "exterior",
+        "observation.images.Wrist Camera": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/IndiaTechTeamSL2/marker_20261020_104622",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rainbowrobotics/JIMTOF_newrobot_20261020_040623",
+      "name": "JIMTOF_newrobot_20261020_040623",
+      "owner": "rainbowrobotics",
+      "robotType": "rby1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 100,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.right": "unknown",
+        "observation.images.left": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rainbowrobotics/JIMTOF_newrobot_20261020_040623",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Woohi123/towel_tape_halffold_gatefold_50_v3",
+      "name": "towel_tape_halffold_gatefold_50_v3",
+      "owner": "Woohi123",
+      "robotType": "so100",
+      "bimanual": true,
+      "hardwareType": "dual_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 4,
+      "cameraRoles": {
+        "observation.images.left_wrist": "wrist",
+        "observation.images.right_wrist": "wrist",
+        "observation.images.astra_depth_viz": "unknown",
+        "observation.images.astra_rgb": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 12,
+      "stateDim": 12,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Woohi123/towel_tape_halffold_gatefold_50_v3",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "k-valentin/g1_xr_sim_table_room_1x3450_short_20261020_142010",
+      "name": "g1_xr_sim_table_room_1x3450_short_20261020_142010",
+      "owner": "k-valentin",
+      "robotType": "unitree_g1-23dof_rev_1_0-amazing_hand-pan_tilt-d455",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.head_camera": "unknown",
+        "observation.images.table_view": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 22,
+      "stateDim": 18,
+      "actionUnits": "radians",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/k-valentin/g1_xr_sim_table_room_1x3450_short_20261020_142010",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "dream-79/omx_f_1020PA_TABLE",
+      "name": "omx_f_1020PA_TABLE",
+      "owner": "dream-79",
+      "robotType": "omx_f",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 59,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_stats_file",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "Pick up the fixed blue block and place it in the yellow basket",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 4.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/dream-79/omx_f_1020PA_TABLE",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "rainbowrobotics/JIMTOF_newrobot_20261020_063628",
+      "name": "JIMTOF_newrobot_20261020_063628",
+      "owner": "rainbowrobotics",
+      "robotType": "rby1",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 80,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.front": "exterior",
+        "observation.images.right": "unknown",
+        "observation.images.left": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 16,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/rainbowrobotics/JIMTOF_newrobot_20261020_063628",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "k-valentin/g1_xr_sim_table_room_1x3450_short_20261020_162714",
+      "name": "g1_xr_sim_table_room_1x3450_short_20261020_162714",
+      "owner": "k-valentin",
+      "robotType": "unitree_g1-23dof_rev_1_0-amazing_hand-pan_tilt-d455",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.head_camera": "unknown",
+        "observation.images.table_view": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 22,
+      "stateDim": 18,
+      "actionUnits": "radians",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/k-valentin/g1_xr_sim_table_room_1x3450_short_20261020_162714",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "k-valentin/g1_xr_sim_table_room_1x3450_short_100ep",
+      "name": "g1_xr_sim_table_room_1x3450_short_100ep",
+      "owner": "k-valentin",
+      "robotType": "unitree_g1-23dof_rev_1_0-amazing_hand-pan_tilt-d455",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 100,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.head_camera": "unknown",
+        "observation.images.table_view": "exterior"
+      },
+      "fps": 30,
+      "actionDim": 22,
+      "stateDim": 18,
+      "actionUnits": "radians",
+      "q": {
+        "key": "degraded",
+        "label": "Degraded",
+        "color": "var(--serious)"
+      },
+      "qualityFlags": [
+        "some_dead_action_channels"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/k-valentin/g1_xr_sim_table_room_1x3450_short_100ep",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "dream-79/omx_f_1020PA_TABLE_CAR2",
+      "name": "omx_f_1020PA_TABLE_CAR2",
+      "owner": "dream-79",
+      "robotType": "omx_f",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 60,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "unknown",
+      "q": {
+        "key": "warning",
+        "label": "Warning",
+        "color": "var(--warning)"
+      },
+      "qualityFlags": [
+        "no_stats_file",
+        "no_quantile_stats"
+      ],
+      "lastUpload": "2026-10-20",
+      "taskString": "Pick up the fixed blue block and place it in the yellow basket",
+      "taskStringQuality": {
+        "total": 1,
+        "placeholder_count": 0,
+        "avg_entropy": 4.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/dream-79/omx_f_1020PA_TABLE_CAR2",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run2_2026_10_20",
+      "name": "eval_LDVLA_bfloat16_Async_stack_V3_run2_2026_10_20",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run2_2026_10_20",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "kiroaiseoul/task06_new_recovery_14D",
+      "name": "task06_new_recovery_14D",
+      "owner": "kiroaiseoul",
+      "robotType": "mobileai_robot",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 263,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.cam_high": "unknown",
+        "observation.images.cam_left_wrist": "wrist",
+        "observation.images.cam_right_wrist": "wrist"
+      },
+      "fps": 30,
+      "actionDim": 16,
+      "stateDim": 14,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/kiroaiseoul/task06_new_recovery_14D",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "digas99/so101_screwdriver_box_goal",
+      "name": "so101_screwdriver_box_goal",
+      "owner": "digas99",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "manipulation",
+        "label": "Fine manipulation",
+        "color": "#d95926"
+      },
+      "episodes": 520,
+      "cameras": 3,
+      "cameraRoles": {
+        "observation.images.wrist": "wrist",
+        "observation.images.top": "exterior",
+        "observation.images.goal": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/digas99/so101_screwdriver_box_goal",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "glannuzel/sugar-in-cup-1",
+      "name": "sugar-in-cup-1",
+      "owner": "glannuzel",
+      "robotType": "grabette",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "pick_place",
+        "label": "Pick & place",
+        "color": "#3987e5"
+      },
+      "episodes": 90,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.right_cam0": "unknown",
+        "observation.images.right_cam1": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 8,
+      "stateDim": null,
+      "actionUnits": "radians",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/glannuzel/sugar-in-cup-1",
+      "isDuplicateOf": null
+    },
+    {
+      "id": "Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run3_2026_10_20",
+      "name": "eval_LDVLA_bfloat16_Async_stack_V3_run3_2026_10_20",
+      "owner": "Alkatt",
+      "robotType": "so100",
+      "bimanual": false,
+      "hardwareType": "single_arm",
+      "cat": {
+        "key": "assembly",
+        "label": "Assembly / insertion",
+        "color": "#c98500"
+      },
+      "episodes": 50,
+      "cameras": 2,
+      "cameraRoles": {
+        "observation.images.camera1": "unknown",
+        "observation.images.camera2": "unknown"
+      },
+      "fps": 30,
+      "actionDim": 6,
+      "stateDim": 6,
+      "actionUnits": "degrees",
+      "q": {
+        "key": "clean",
+        "label": "Clean",
+        "color": "var(--good)"
+      },
+      "qualityFlags": [],
+      "lastUpload": "2026-10-20",
+      "taskString": "",
+      "taskStringQuality": {
+        "total": 0,
+        "placeholder_count": 0,
+        "avg_entropy": 0.0
+      },
+      "downloads": 0,
+      "hubUrl": "https://huggingface.co/datasets/Alkatt/eval_LDVLA_bfloat16_Async_stack_V3_run3_2026_10_20",
       "isDuplicateOf": null
     }
   ]
